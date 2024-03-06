@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CekController;
+use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,8 +30,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/experience', [ExperienceController::class, 'index'])->middleware(['auth', 'verified'])->name('experience');
+
 Route::get('/cek1', function () {
-    return view('<h1>Cek1</h1>');
+    return '<h1>Cek1</h1>';
 })->middleware(['auth', 'verified']);
 
 Route::get('/cek2', [CekController::class, 'edit'])->middleware(['auth', 'verified']);

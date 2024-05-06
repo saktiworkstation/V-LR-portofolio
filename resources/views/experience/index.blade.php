@@ -9,7 +9,9 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    {{ __('Experience Data') }}
+                    <h4 class="pb-3 font-semibold text-xl text-gray-800 leading-tight">
+                        {{ __('Experience Data') }}
+                    </h4>
                     <table class="border-collapse border-slate-500">
                         <thead class="bg-gray-800 text-white">
                             <tr>

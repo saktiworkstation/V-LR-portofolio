@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/experience', [ExperienceController::class, 'index'])->middleware(['auth', 'verified'])->name('experience');
 Route::get('/experience/create', [ExperienceController::class, 'create'])->middleware(['auth', 'verified'])->name('experience.create');
+Route::post('/experience/store', [ExperienceController::class, 'create'])->middleware(['auth', 'verified'])->name('experience.store');
 
 Route::get('/cek1', function () {
     return '<h1>Cek1</h1>';

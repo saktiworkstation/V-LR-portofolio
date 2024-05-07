@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('experiences', function (Blueprint $table) {
             $table->id();
             $table->string('company');
-            $table->string('order')->unique();
+            $table->integer('order')->unique();
             $table->string('field');
             $table->string('duration');
             $table->timestamps();

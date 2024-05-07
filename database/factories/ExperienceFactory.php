@@ -21,7 +21,7 @@ class ExperienceFactory extends Factory
         $duration = $startYear . '-' . $endYear;
         return [
             'company' => fake()->company,
-            'order' => fake()->unique()->word,
+            'order' => mt_rand(1, 100),
             'field' => fake()->word,
             'duration' => $duration,
         ];

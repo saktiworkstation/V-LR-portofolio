@@ -30,7 +30,16 @@ class ExperienceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'company' => 'required|max:255',
+            'durations' => 'required|max:255',
+            'field' => 'required',
+            'order' => 'required|unique:experiences',
+        ]);
+
+        Experience::create($validatedData);
+
+        return redirect('/dashboard')->with('success', 'New ecperience has been added!');
     }
 
     /**

@@ -34,7 +34,7 @@ class ExperienceController extends Controller
             'company' => 'required|max:255',
             'durations' => 'required|max:255',
             'field' => 'required',
-            'order' => 'required|unique:experiences',
+            'order' => 'required|numeric|unique:experiences',
         ]);
 
         Experience::create($validatedData);

@@ -34,12 +34,12 @@ class ExperienceController extends Controller
             'company' => 'required|max:255',
             'durations' => 'required|max:255',
             'field' => 'required',
-            'order' => 'required|numeric|unique:experiences',
+            'order' => 'required|numeric',
         ]);
 
         Experience::create($validatedData);
 
-        return redirect('/dashboard')->with('success', 'New ecperience has been added!');
+        return redirect('dashboard')->with('success', 'New ecperience has been added!');
     }
 
     /**

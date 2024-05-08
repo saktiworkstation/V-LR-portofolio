@@ -20,11 +20,7 @@
                             </p>
                         </header>
 
-                        <form id="send-verification" method="post" action="{{ route('verification.send') }}">
-                            @csrf
-                        </form>
-
-                        <form method="post" action="{{ route('experience.store') }}" class="mt-6 space-y-6">
+                        <form method="POST" action="/experience/store" class="mt-6 space-y-6">
                             @csrf
                             <div>
                                 <x-input-label for="company" :value="__('Company')" />
@@ -34,7 +30,7 @@
                             </div>
                             <div>
                                 <x-input-label for="order" :value="__('Order')" />
-                                <x-text-input id="order" name="order" type="text" class="mt-1 block w-full"
+                                <x-text-input id="order" name="order" type="number" class="mt-1 block w-full"
                                     :value="old('order')" required autofocus autocomplete="order" />
                                 <x-input-error class="mt-2" :messages="$errors->get('order')" />
                             </div>
@@ -53,11 +49,6 @@
 
                             <div class="flex items-center gap-4">
                                 <x-primary-button>{{ __('Save') }}</x-primary-button>
-
-                                @if (session('status') === 'profile-updated')
-                                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
-                                        class="text-sm text-gray-600">{{ __('Saved.') }}</p>
-                                @endif
                             </div>
                         </form>
                     </section>

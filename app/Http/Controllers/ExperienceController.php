@@ -32,7 +32,7 @@ class ExperienceController extends Controller
     {
         $validatedData = $request->validate([
             'company' => 'required|max:255',
-            'durations' => 'required|max:255',
+            'duration' => 'required|max:255',
             'field' => 'required',
             'order' => 'required|numeric',
         ]);

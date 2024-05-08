@@ -20,7 +20,7 @@
                             </p>
                         </header>
 
-                        <form method="POST" action="/experience/store" class="mt-6 space-y-6">
+                        <form method="POST" action="{{ route('experience.store') }}" class="mt-6 space-y-6">
                             @csrf
                             <div>
                                 <x-input-label for="company" :value="__('Company')" />

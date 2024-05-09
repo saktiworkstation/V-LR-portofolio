@@ -14,7 +14,7 @@
             </div>
 
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
+                <div class="max-w-4xl">
                     <h4 class="pb-3 font-semibold text-xl text-gray-800 leading-tight">
                         {{ __('Experience Data') }}
                     </h4>
@@ -25,6 +25,7 @@
                                 <th class="px-6 py-2 border border-slate-600">Order</th>
                                 <th class="px-6 py-2 border border-slate-600">Field</th>
                                 <th class="px-6 py-2 border border-slate-600">Duration</th>
+                                <th class="px-6 py-2 border border-slate-600">Action</th>
                             </tr>
                         </thead>
                         <tbody class="bg-gray-500">
@@ -34,6 +35,20 @@
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->order }}</td>
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->field }}</td>
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->duration }}</td>
+                                    <td class="px-6 py-2 border border-slate-700">
+                                        <a href="experience/{{ $data->id }}/edit" class="">
+                                            Edit</span>
+                                        </a>
+                                        <form action="experience/{{ $data->id }}/delete" method="post"
+                                            class="d-inline">
+                                            @method('delete')
+                                            @csrf
+                                            <button class=""
+                                                onclick="return confirm('Are you sure want to delete {{ $data->company }}?')">
+                                                Hapus</span>
+                                            </button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -31,12 +31,12 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/experience', [ExperienceController::class, 'index'])->middleware(['auth', 'verified'])->name('experience');
-    Route::get('/experience/create', [ExperienceController::class, 'create'])->middleware(['auth', 'verified'])->name('experience.create');
-    Route::post('/experience/store', [ExperienceController::class, 'store'])->middleware(['auth', 'verified'])->name('experience.store');
-    Route::get('/experience/{id}/edit', [ExperienceController::class, 'edit'])->middleware(['auth', 'verified']);
-    Route::put('/experience/{id}/update', [ExperienceController::class, 'update'])->middleware(['auth', 'verified']);
-    Route::delete('/experience/{id}/delete', [ExperienceController::class, 'destroy'])->middleware(['auth', 'verified']);
+    Route::get('/experience', [ExperienceController::class, 'index'])->name('experience');
+    Route::get('/experience/create', [ExperienceController::class, 'create'])->name('experience.create');
+    Route::post('/experience/store', [ExperienceController::class, 'store'])->name('experience.store');
+    Route::get('/experience/{id}/edit', [ExperienceController::class, 'edit']);
+    Route::put('/experience/{id}/update', [ExperienceController::class, 'update']);
+    Route::delete('/experience/{id}/delete', [ExperienceController::class, 'destroy']);
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {

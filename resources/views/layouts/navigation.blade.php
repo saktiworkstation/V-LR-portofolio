@@ -19,6 +19,10 @@
                     <x-nav-link :href="route('experience')" :active="request()->routeIs('experience')">
                         {{ __('Experience') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('education')" :active="request()->routeIs('education')">
+                        {{ __('Education') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -81,6 +85,12 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('experience')" :active="request()->routeIs('experience')">
+                {{ __('Experience') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('education')" :active="request()->routeIs('education')">
+                {{ __('Education') }}
             </x-responsive-nav-link>
         </div>
 

@@ -79,7 +79,7 @@ class ExperienceController extends Controller
 
         $validatedData = $request->validate($rules);
 
-        Experience::where('id', $experience->id)->update($validatedData);
+        Experience::where('id', $id)->update($validatedData);
 
         return redirect('experience')->with('success', 'experience has been updated!');
     }

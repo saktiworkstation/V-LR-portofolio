@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CekController;
+use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -40,7 +41,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/education')->name('education');
+    Route::get('/education', [EducationController::class, 'index'])->name('education');
 });
 
 require __DIR__.'/auth.php';

@@ -39,4 +39,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/experience/{id}/delete', [ExperienceController::class, 'destroy'])->middleware(['auth', 'verified']);
 });
 
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/education')->name('education');
+});
+
 require __DIR__.'/auth.php';

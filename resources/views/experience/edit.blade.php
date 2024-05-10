@@ -20,7 +20,7 @@
                             </p>
                         </header>
 
-                        <form method="POST" action="{{ route('experience.edit') }}" class="mt-6 space-y-6">
+                        <form method="POST" action="/experience/{{ $data->id }}/update" class="mt-6 space-y-6">
                             @csrf
                             @method('PUT')
                             <div>

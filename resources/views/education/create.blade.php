@@ -20,7 +20,7 @@
                             </p>
                         </header>
 
-                        <form method="POST" action="{{ route('education') }}" class="mt-6 space-y-6">
+                        <form method="POST" action="{{ route('education.store') }}" class="mt-6 space-y-6">
                             @csrf
                             <div>
                                 <x-input-label for="degree" :value="__('degree')" />

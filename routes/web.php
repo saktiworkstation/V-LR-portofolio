@@ -43,6 +43,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/education', [EducationController::class, 'index'])->name('education');
     Route::get('/education/create', [EducationController::class, 'create'])->name('education.create');
+    Route::post('/education/store', [EducationController::class, 'store'])->name('education.store');
 });
 
 require __DIR__.'/auth.php';

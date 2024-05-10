@@ -36,6 +36,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/experience/store', [ExperienceController::class, 'store'])->middleware(['auth', 'verified'])->name('experience.store');
     Route::get('/experience/{id}/edit', [ExperienceController::class, 'edit'])->middleware(['auth', 'verified']);
     Route::put('/experience/{id}/update', [ExperienceController::class, 'update'])->middleware(['auth', 'verified']);
+    Route::delete('/experience/{id}/delete', [ExperienceController::class, 'destroy'])->middleware(['auth', 'verified']);
 });
 
 require __DIR__.'/auth.php';

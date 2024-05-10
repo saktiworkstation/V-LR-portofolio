@@ -34,7 +34,7 @@ class ExperienceController extends Controller
             'company' => 'required|max:255',
             'duration' => 'required|max:255',
             'field' => 'required',
-            'order' => 'required|numeric',
+            'order' => 'required|numeric|unique:experiences',
         ]);
 
         Experience::create($validatedData);
@@ -55,7 +55,7 @@ class ExperienceController extends Controller
      */
     public function edit($id)
     {
-        $experience = Experience::where('id', $id)->firstOrFail();;
+        $experience = Experience::where('id', $id)->firstOrFail();
         return view('experience.edit', [
             'data' => $experience
         ]);
@@ -64,9 +64,24 @@ class ExperienceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Experience $experience)
+    public function update($id, Request $request)
     {
-        //
+        $experience = Experience::where('id', $id)->firstOrFail();
+        $rules = [
+            'company' => 'required|max:255',
+            'duration' => 'required|max:255',
+            'field' => 'required',
+        ];
+
+        if ($request->order != $experience->order) {
+            $rules['order'] = 'required|numeric|unique:experiences';
+        }
+
+        $validatedData = $request->validate($rules);
+
+        Experience::where('id', $experience->id)->update($validatedData);
+
+        return redirect('experience')->with('success', 'experience has been updated!');
     }
 
     /**

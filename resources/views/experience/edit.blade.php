@@ -20,30 +20,31 @@
                             </p>
                         </header>
 
-                        <form method="POST" action="{{ route('experience.store') }}" class="mt-6 space-y-6">
+                        <form method="POST" action="{{ route('experience.edit') }}" class="mt-6 space-y-6">
                             @csrf
+                            @method('PUT')
                             <div>
                                 <x-input-label for="company" :value="__('Company')" />
                                 <x-text-input id="company" name="company" type="text" class="mt-1 block w-full"
-                                    :value="old('company')" required autofocus autocomplete="company" />
+                                    :value="old('company', $data->company)" required autofocus autocomplete="company" />
                                 <x-input-error class="mt-2" :messages="$errors->get('company')" />
                             </div>
                             <div>
                                 <x-input-label for="order" :value="__('Order')" />
                                 <x-text-input id="order" name="order" type="number" class="mt-1 block w-full"
-                                    :value="old('order')" required autofocus autocomplete="order" />
+                                    :value="old('order', $data->order)" required autofocus autocomplete="order" />
                                 <x-input-error class="mt-2" :messages="$errors->get('order')" />
                             </div>
                             <div>
                                 <x-input-label for="field" :value="__('Field')" />
                                 <x-text-input id="field" name="field" type="text" class="mt-1 block w-full"
-                                    :value="old('field')" required autofocus autocomplete="field" />
+                                    :value="old('field', $data->field)" required autofocus autocomplete="field" />
                                 <x-input-error class="mt-2" :messages="$errors->get('field')" />
                             </div>
                             <div>
                                 <x-input-label for="duration" :value="__('Year Duration')" />
                                 <x-text-input id="duration" name="duration" type="text" class="mt-1 block w-full"
-                                    :value="old('duration')" required autofocus autocomplete="duration" />
+                                    :value="old('duration', $data->duration)" required autofocus autocomplete="duration" />
                                 <x-input-error class="mt-2" :messages="$errors->get('duration')" />
                             </div>
 

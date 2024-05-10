@@ -36,10 +36,10 @@
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->field }}</td>
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->duration }}</td>
                                     <td class="px-6 py-2 border border-slate-700">
-                                        <a href="experience/{{ $data->id }}/edit" class="">
+                                        <a href="/experience/{{ $data->id }}/edit" class="">
                                             Edit</span>
                                         </a>
-                                        <form action="experience/{{ $data->id }}/delete" method="post"
+                                        <form action="/experience/{{ $data->id }}/delete" method="post"
                                             class="d-inline">
                                             @method('delete')
                                             @csrf

@@ -30,7 +30,16 @@ class EducationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'degree' => 'required|max:70',
+            'field_of_study' => 'required|max:100',
+            'education_name' => 'required|max:100',
+            'graduation_year' => 'required|max:50',
+        ]);
+
+        Education::create($validatedData);
+
+        return redirect('Education')->with('success', 'New Education has been added!');
     }
 
     /**

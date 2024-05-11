@@ -39,7 +39,7 @@ class EducationController extends Controller
 
         Education::create($validatedData);
 
-        return redirect('Education')->with('success', 'New Education has been added!');
+        return redirect('education')->with('success', 'New Education has been added!');
     }
 
     /**

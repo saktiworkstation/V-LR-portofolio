@@ -55,9 +55,26 @@ class EducationController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Education $education)
+    public function update(Request $request, $id)
     {
-        //
+        $education = Education::where('id', $id)->firstOrFail();
+        if($education){
+            $rules = [
+                'degree' => 'required|max:70',
+                'field_of_study' => 'required|max:100',
+                'education_name' => 'required|max:100',
+                'graduation_year' => 'required|max:50',
+            ];
+
+            $validatedData = $request->validate($rules);
+
+            Education::where('id', $id)->update($validatedData);
+
+            return redirect('education')->with('success', 'education has been updated!');
+        }
+        else{
+            return 'Education Not Faund';
+        }
     }
 
     /**

@@ -43,14 +43,6 @@ class EducationController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(Education $education)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(Education $education)

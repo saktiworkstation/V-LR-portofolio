@@ -9,7 +9,7 @@ Welcome to my personal portfolio template! Below you'll find a brief overview of
    Showcase my professional journey and accomplishments.
 
 2. **Education:**  
-   - Status: In Progress  
+   - Status: Completed  
    Highlight my educational background and ongoing learning endeavors.
 
 3. **Message:**  
@@ -17,7 +17,7 @@ Welcome to my personal portfolio template! Below you'll find a brief overview of
    Stay tuned for a personal message from me!
 
 4. **Interest:**  
-   - Status: Planning  
+   - Status: In Progress  
    Coming soon: Discover my passions and hobbies.
 
 5. **Project:**  

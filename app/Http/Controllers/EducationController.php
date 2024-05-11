@@ -48,7 +48,7 @@ class EducationController extends Controller
     public function edit($id)
     {
         return view('education.edit',[
-            'date' => Education::where('id', $id)->firstOrFail(),
+            'data' => Education::where('id', $id)->firstOrFail(),
         ]);
     }
 

@@ -80,8 +80,9 @@ class EducationController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Education $education)
+    public function destroy($id)
     {
-        //
+        Education::destroy($id);
+        return redirect('education')->with('success', 'Education has been deleted!');
     }
 }

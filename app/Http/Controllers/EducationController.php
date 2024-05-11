@@ -22,7 +22,7 @@ class EducationController extends Controller
      */
     public function create()
     {
-        //
+        return view('education.create');
     }
 
     /**

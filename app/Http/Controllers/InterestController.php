@@ -30,7 +30,13 @@ class InterestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'interest' => 'required|max:70'
+        ]);
+
+        Interest::create($validatedData);
+
+        return redirect('interest')->with('success', 'New Interest has been added!');
     }
 
     /**

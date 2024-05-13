@@ -52,9 +52,23 @@ class InterestController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Interest $interest)
+    public function update(Request $request, $id)
     {
-        //
+        $interest = Interest::where('id', $id)->firstOrFail();
+        if($interest){
+            $rules = [
+                'interest' => 'required|max:70',
+            ];
+
+            $validatedData = $request->validate($rules);
+
+            Interest::where('id', $id)->update($validatedData);
+
+            return redirect('interest')->with('success', 'Interest has been updated!');
+        }
+        else{
+            return 'Interest Not Faund';
+        }
     }
 
     /**

@@ -42,9 +42,11 @@ class InterestController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Interest $interest)
+    public function edit($id)
     {
-        //
+        return view('interest.edit',[
+            'data' => Interest::where('id', $id)->firstOrFail(),
+        ]);
     }
 
     /**

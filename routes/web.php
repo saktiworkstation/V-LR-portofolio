@@ -3,6 +3,7 @@
 use App\Http\Controllers\CekController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\InterestController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -50,7 +51,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/interest')->name('interest');
+    Route::get('/interest', [InterestController::class, 'index'])->name('interest');
 });
 
 require __DIR__.'/auth.php';

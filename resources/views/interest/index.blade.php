@@ -21,20 +21,14 @@
                     <table class="border-collapse border-slate-500">
                         <thead class="bg-gray-800 text-white">
                             <tr>
-                                <th class="px-6 py-2 border border-slate-600">Company</th>
-                                <th class="px-6 py-2 border border-slate-600">Order</th>
-                                <th class="px-6 py-2 border border-slate-600">Field</th>
-                                <th class="px-6 py-2 border border-slate-600">Duration</th>
+                                <th class="px-6 py-2 border border-slate-600">Interest</th>
                                 <th class="px-6 py-2 border border-slate-600">Action</th>
                             </tr>
                         </thead>
                         <tbody class="bg-gray-500">
                             @foreach ($datas as $data)
                                 <tr class="text-white">
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->company }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->order }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->field }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->duration }}</td>
+                                    <td class="px-6 py-2 border border-slate-700">{{ $data->interest }}</td>
                                     <td class="px-6 py-2 border border-slate-700">
                                         <a href="/interest/{{ $data->id }}/edit" class="">
                                             Edit</span>

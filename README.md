@@ -13,11 +13,11 @@ Welcome to my personal portfolio template! Below you'll find a brief overview of
    Highlight my educational background and ongoing learning endeavors.
 
 3. **Message:**  
-   - Status: Planning  
+   - Status: In Progress  
    Stay tuned for a personal message from me!
 
 4. **Interest:**  
-   - Status: In Progress  
+   - Status: Completed  
    Coming soon: Discover my passions and hobbies.
 
 5. **Project:**  

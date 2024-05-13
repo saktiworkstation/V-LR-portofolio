@@ -56,6 +56,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/interest/store', [InterestController::class, 'store'])->name('interest.store');
     Route::get('/interest/{id}/edit', [InterestController::class, 'edit']);
     Route::put('/interest/{id}/update', [InterestController::class, 'update']);
+    Route::delete('/interest/{id}/delete', [InterestController::class, 'destroy']);
 });
 
 require __DIR__.'/auth.php';

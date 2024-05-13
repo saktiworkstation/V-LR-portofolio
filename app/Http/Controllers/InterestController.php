@@ -40,14 +40,6 @@ class InterestController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(Interest $interest)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(Interest $interest)

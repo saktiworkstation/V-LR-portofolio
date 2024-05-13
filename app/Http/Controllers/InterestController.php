@@ -12,7 +12,9 @@ class InterestController extends Controller
      */
     public function index()
     {
-        //
+        return view('interest.index',[
+            'datas' => Interest::latest()->get(),
+        ]);
     }
 
     /**

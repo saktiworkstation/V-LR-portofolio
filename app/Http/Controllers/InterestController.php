@@ -74,8 +74,9 @@ class InterestController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Interest $interest)
+    public function destroy($id)
     {
-        //
+        Interest::destroy($id);
+        return redirect('interest')->with('success', 'Interest has been deleted!');
     }
 }

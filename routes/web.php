@@ -52,6 +52,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/interest', [InterestController::class, 'index'])->name('interest');
+    Route::get('/interest/create', [InterestController::class, 'create'])->name('interest.create');
+    Route::post('/interest/store', [InterestController::class, 'store'])->name('interest.store');
 });
 
 require __DIR__.'/auth.php';

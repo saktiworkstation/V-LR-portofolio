@@ -19,6 +19,10 @@
                     <x-nav-link :href="route('experience')" :active="request()->routeIs('experience')">
                         {{ __('Experience') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('message.create')" :active="request()->routeIs('message.create')">
+                        {{ __('Contact Me') }}
+                    </x-nav-link>
                 </div>
             </div>
 

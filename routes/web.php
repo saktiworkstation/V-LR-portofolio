@@ -62,6 +62,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/message', [MessageController::class, 'index'])->name('message');
+    Route::get('/message/create', [MessageController::class, 'create'])->name('message.create');
+    Route::post('/message/store', [MessageController::class, 'store'])->name('message.store');
 });
 
 require __DIR__.'/auth.php';

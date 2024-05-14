@@ -13,7 +13,7 @@ Welcome to my personal portfolio template! Below you'll find a brief overview of
    Highlight my educational background and ongoing learning endeavors.
 
 3. **Message:**  
-   - Status: In Progress  
+   - Status: Completed 
    Stay tuned for a personal message from me!
 
 4. **Interest:**  
@@ -25,7 +25,7 @@ Welcome to my personal portfolio template! Below you'll find a brief overview of
    Exciting projects in the pipeline! Stay tuned for updates.
 
 6. **Skill:**  
-   - Status: Planning  
+   - Status: In Progress  
    Explore my skill set and expertise.
 
 ### About Me:

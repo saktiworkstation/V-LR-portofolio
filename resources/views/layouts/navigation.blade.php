@@ -27,6 +27,10 @@
                     <x-nav-link :href="route('interest')" :active="request()->routeIs('interest')">
                         {{ __('Interest') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('message')" :active="request()->routeIs('message')">
+                        {{ __('Message') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -97,7 +101,10 @@
                 {{ __('Education') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('interest')" :active="request()->routeIs('interest')">
-                {{ __('interest') }}
+                {{ __('Interest') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('message')" :active="request()->routeIs('message')">
+                {{ __('Message') }}
             </x-responsive-nav-link>
         </div>
 

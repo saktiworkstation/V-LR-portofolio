@@ -30,7 +30,15 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:70',
+            'email' => 'required|string|lowercase|email|max:255',
+            'message' => 'required'
+        ]);
+
+        Message::create($validatedData);
+
+        return redirect('message')->with('success', 'New message has been added!');
     }
 
     /**

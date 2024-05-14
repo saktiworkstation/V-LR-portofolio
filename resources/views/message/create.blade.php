@@ -1,7 +1,7 @@
 <x-landing-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Landing') }}
+            {{ __('Message') }}
         </h2>
     </x-slot>
 
@@ -12,15 +12,15 @@
                     <section>
                         <header>
                             <h2 class="text-lg font-medium text-gray-900">
-                                {{ __('Create Interest') }}
+                                {{ __('Create Message') }}
                             </h2>
 
                             <p class="mt-1 text-sm text-gray-600">
-                                {{ __('Added your newes interest here.') }}
+                                {{ __('Added your newes Message here.') }}
                             </p>
                         </header>
 
-                        <form method="POST" action="{{ route('interest.store') }}" class="mt-6 space-y-6">
+                        <form method="POST" action="{{ route('message.store') }}" class="mt-6 space-y-6">
                             @csrf
                             <div>
                                 <x-input-label for="name" :value="__('name')" />

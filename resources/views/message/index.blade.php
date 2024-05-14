@@ -28,9 +28,6 @@
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->email }}</td>
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->message }}</td>
                                     <td class="px-6 py-2 border border-slate-700">
-                                        <a href="/message/{{ $data->id }}/edit" class="">
-                                            Edit</span>
-                                        </a>
                                         <form action="/message/{{ $data->id }}/delete" method="post"
                                             class="d-inline">
                                             @method('delete')

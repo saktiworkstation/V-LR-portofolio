@@ -4,6 +4,7 @@ use App\Http\Controllers\CekController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\InterestController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -57,6 +58,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/interest/{id}/edit', [InterestController::class, 'edit']);
     Route::put('/interest/{id}/update', [InterestController::class, 'update']);
     Route::delete('/interest/{id}/delete', [InterestController::class, 'destroy']);
+});
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/message', [MessageController::class, 'index'])->name('message');
 });
 
 require __DIR__.'/auth.php';

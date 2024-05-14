@@ -12,7 +12,9 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        return view('message.index',[
+            'data' => Message::latest()->get(),
+        ]);
     }
 
     /**

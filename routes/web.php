@@ -70,6 +70,8 @@ Route::post('/message/store', [MessageController::class, 'store'])->name('messag
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/skill', [SkillController::class, 'index'])->name('skill');
+    Route::get('/skill/create', [SkillController::class, 'create'])->name('skill.create');
+    Route::post('/skill/store', [SkillController::class, 'store'])->name('skill.store');
 });
 
 require __DIR__.'/auth.php';

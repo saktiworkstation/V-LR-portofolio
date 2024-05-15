@@ -54,9 +54,25 @@ class SkillController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Skill $skill)
+    public function update(Request $request, $id)
     {
-        //
+        $skill = Skill::where('id', $id)->firstOrFail();
+        if($skill){
+            $rules = [
+                'name' => 'required|string|max:100',
+                'description' => 'nullable|string',
+                'skill_level' => 'required|in:Beginner,Intermediate,Advanced,Expert',
+            ];
+
+            $validatedData = $request->validate($rules);
+
+            Skill::where('id', $id)->update($validatedData);
+
+            return redirect('skill')->with('success', 'Skill has been updated!');
+        }
+        else{
+            return 'Skill Not Faund';
+        }
     }
 
     /**

@@ -21,11 +21,11 @@ Welcome to my personal portfolio template! Below you'll find a brief overview of
    Coming soon: Discover my passions and hobbies.
 
 5. **Project:**  
-   - Status: Planning  
+   - Status: In Progress  
    Exciting projects in the pipeline! Stay tuned for updates.
 
 6. **Skill:**  
-   - Status: In Progress  
+   - Status: Completed  
    Explore my skill set and expertise.
 
 ### About Me:

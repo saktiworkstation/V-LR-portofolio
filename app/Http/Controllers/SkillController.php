@@ -78,8 +78,9 @@ class SkillController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Skill $skill)
+    public function destroy($id)
     {
-        //
+        Skill::destroy($id);
+        return redirect('skill')->with('success', 'Skill has been deleted!');
     }
 }

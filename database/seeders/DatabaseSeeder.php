@@ -8,6 +8,7 @@ use App\Models\Education;
 use App\Models\Experience;
 use App\Models\Interest;
 use App\Models\Message;
+use App\Models\Skill;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,5 +29,6 @@ class DatabaseSeeder extends Seeder
         Education::factory(10)->create();
         Interest::factory(10)->create();
         Message::factory(10)->create();
+        Skill::factory(10)->create();
     }
 }

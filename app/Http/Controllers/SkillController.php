@@ -42,14 +42,6 @@ class SkillController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(Skill $skill)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(Skill $skill)

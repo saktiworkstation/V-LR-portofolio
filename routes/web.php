@@ -74,6 +74,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/skill/store', [SkillController::class, 'store'])->name('skill.store');
     Route::get('/skill/{id}/edit', [SkillController::class, 'edit']);
     Route::put('/skill/{id}/update', [SkillController::class, 'update']);
+    Route::delete('/skill/{id}/delete', [SkillController::class, 'destroy']);
 });
 
 require __DIR__.'/auth.php';

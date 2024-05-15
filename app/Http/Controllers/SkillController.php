@@ -44,9 +44,11 @@ class SkillController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Skill $skill)
+    public function edit($id)
     {
-        //
+        return view('skill.edit', [
+            'data' => Skill::where('id', $id)->firstOrFail(),
+        ]);
     }
 
     /**

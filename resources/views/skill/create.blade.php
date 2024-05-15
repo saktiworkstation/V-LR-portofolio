@@ -35,8 +35,8 @@
                                 <x-input-error class="mt-2" :messages="$errors->get('description')" />
                             </div>
                             <div>
-                                <x-input-label for="description" :value="__('description')" />
-                                <<x-select-input id="skill_level" name="skill_level" required>
+                                <x-input-label for="skill_level" :value="__('Skill Level')" />
+                                <x-select-input id="skill_level" name="skill_level" required>
                                     <option value="">Pilih Tingkat Skill</option>
                                     <option value="Beginner" {{ old('skill_level') == 'Beginner' ? 'selected' : '' }}>
                                         Beginner</option>
@@ -47,8 +47,8 @@
                                         Advanced</option>
                                     <option value="Expert" {{ old('skill_level') == 'Expert' ? 'selected' : '' }}>Expert
                                     </option>
-                                    </x-select-input>
-                                    <x-input-error class="mt-2" :messages="$errors->get('description')" />
+                                </x-select-input>
+                                <x-input-error class="mt-2" :messages="$errors->get('description')" />
                             </div>
 
                             <div class="flex items-center gap-4">

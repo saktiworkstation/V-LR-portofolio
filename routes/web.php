@@ -6,6 +6,7 @@ use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\InterestController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SkillController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,5 +67,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 Route::get('/message/create', [MessageController::class, 'create'])->name('message.create');
 Route::post('/message/store', [MessageController::class, 'store'])->name('message.store');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/skill', [SkillController::class, 'index'])->name('skill');
+});
 
 require __DIR__.'/auth.php';

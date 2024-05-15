@@ -72,6 +72,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/skill', [SkillController::class, 'index'])->name('skill');
     Route::get('/skill/create', [SkillController::class, 'create'])->name('skill.create');
     Route::post('/skill/store', [SkillController::class, 'store'])->name('skill.store');
+    Route::get('/skill/{id}/edit', [SkillController::class, 'edit']);
+    Route::put('/skill/{id}/update', [SkillController::class, 'update']);
 });
 
 require __DIR__.'/auth.php';

@@ -30,7 +30,15 @@ class SkillController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:100',
+            'description' => 'nullable|string',
+            'skill_level' => 'required|in:Beginner,Intermediate,Advanced,Expert',
+        ]);
+
+        Skill::create($validatedData);
+
+        return redirect('skill')->with('success', 'New skill has been added!');
     }
 
     /**

@@ -24,7 +24,7 @@
                                 <th class="px-6 py-2 border border-slate-600">Name Project</th>
                                 <th class="px-6 py-2 border border-slate-600">Description</th>
                                 <th class="px-6 py-2 border border-slate-600">Image</th>
-                                <th class="px-6 py-2 border border-slate-600">Url</th>
+                                <th class="px-6 py-2 border border-slate-600">Link Project</th>
                                 <th class="px-6 py-2 border border-slate-600">Action</th>
                             </tr>
                         </thead>
@@ -34,7 +34,7 @@
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->name }}</td>
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->description }}</td>
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->img }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->url }}</td>
+                                    <td class="px-6 py-2 border border-slate-700">{{ $data->link }}</td>
                                     <td class="px-6 py-2 border border-slate-700">
                                         <a href="/project/{{ $data->id }}/edit" class="">
                                             Edit</span>

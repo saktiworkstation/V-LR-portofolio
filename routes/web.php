@@ -6,6 +6,7 @@ use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\InterestController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SkillController;
 use Illuminate\Support\Facades\Route;
 
@@ -75,6 +76,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/skill/{id}/edit', [SkillController::class, 'edit']);
     Route::put('/skill/{id}/update', [SkillController::class, 'update']);
     Route::delete('/skill/{id}/delete', [SkillController::class, 'destroy']);
+});
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/project', [ProjectController::class, 'index'])->name('project');
 });
 
 require __DIR__.'/auth.php';

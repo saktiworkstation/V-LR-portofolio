@@ -80,6 +80,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/project', [ProjectController::class, 'index'])->name('project');
+    Route::get('/project/create', [ProjectController::class, 'create'])->name('project.create');
+    Route::post('/project/store', [ProjectController::class, 'store'])->name('project.store');
 });
 
 require __DIR__.'/auth.php';

@@ -37,10 +37,10 @@
                                 <x-input-error class="mt-2" :messages="$errors->get('description')" />
                             </div>
                             <div>
-                                <x-input-label for="url" :value="__('url')" />
-                                <x-text-input id="url" name="url" type="text" class="mt-1 block w-full"
-                                    :value="old('url', $data->url)" required autofocus autocomplete="url" />
-                                <x-input-error class="mt-2" :messages="$errors->get('url')" />
+                                <x-input-label for="link" :value="__('link')" />
+                                <x-text-input id="link" name="link" type="text" class="mt-1 block w-full"
+                                    :value="old('link', $data->link)" required autofocus autocomplete="link" />
+                                <x-input-error class="mt-2" :messages="$errors->get('link')" />
                             </div>
 
                             <div class="flex items-center gap-4">

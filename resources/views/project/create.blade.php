@@ -20,7 +20,8 @@
                             </p>
                         </header>
 
-                        <form method="POST" action="{{ route('project.store') }}" class="mt-6 space-y-6">
+                        <form method="POST" action="{{ route('project.store') }}" class="mt-6 space-y-6"
+                            enctype="multipart/form-data">
                             @csrf
                             <div>
                                 <x-input-label for="name" :value="__('name')" />
@@ -31,20 +32,19 @@
                             <div>
                                 <x-input-label for="description" :value="__('description')" />
                                 <x-text-input id="description" name="description" type="text"
-                                    class="mt-1 block w-full" :value="old('description')" required autofocus
-                                    autocomplete="description" />
+                                    class="mt-1 block w-full" :value="old('description')" required autocomplete="description" />
                                 <x-input-error class="mt-2" :messages="$errors->get('description')" />
                             </div>
                             <div>
                                 <x-input-label for="link" :value="__('link')" />
                                 <x-text-input id="link" name="link" type="text" class="mt-1 block w-full"
-                                    :value="old('link')" required autofocus autocomplete="link" />
+                                    :value="old('link')" required autocomplete="link" />
                                 <x-input-error class="mt-2" :messages="$errors->get('link')" />
                             </div>
                             <div>
                                 <x-input-label for="img" :value="__('img')" />
                                 <x-text-input id="img" name="img" type="file" class="mt-1 block w-full"
-                                    :value="old('img')" required autofocus autocomplete="img" />
+                                    required autocomplete="img" />
                                 <x-input-error class="mt-2" :messages="$errors->get('img')" />
                             </div>
 

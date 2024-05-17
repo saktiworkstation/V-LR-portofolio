@@ -33,8 +33,13 @@ class ProjectController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:100',
             'description' => 'nullable|string',
+            'img' => 'image',
             'link' => 'url|required',
         ]);
+
+        if ($request->file('img')) {
+            $validatedData['img'] = $request->file('img')->store('project-img');
+        }
 
         Project::create($validatedData);
 

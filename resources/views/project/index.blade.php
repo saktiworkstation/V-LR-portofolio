@@ -33,7 +33,11 @@
                                 <tr class="text-white">
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->name }}</td>
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->description }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->img }}</td>
+                                    <td class="px-6 py-2 border border-slate-700">
+                                        @if ($data->img != '')
+                                            <img src="{{ asset('storage/' . $data->img) }}" alt="">
+                                        @endif
+                                    </td>
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->link }}</td>
                                     <td class="px-6 py-2 border border-slate-700">
                                         <a href="/project/{{ $data->id }}/edit" class="">

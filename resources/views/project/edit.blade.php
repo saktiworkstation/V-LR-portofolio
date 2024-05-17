@@ -20,7 +20,8 @@
                             </p>
                         </header>
 
-                        <form method="POST" action="/project/{{ $data->id }}/update" class="mt-6 space-y-6">
+                        <form method="POST" action="/project/{{ $data->id }}/update" class="mt-6 space-y-6"
+                            enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div>
@@ -41,6 +42,12 @@
                                 <x-text-input id="link" name="link" type="text" class="mt-1 block w-full"
                                     :value="old('link', $data->link)" required autofocus autocomplete="link" />
                                 <x-input-error class="mt-2" :messages="$errors->get('link')" />
+                            </div>
+                            <div>
+                                <x-input-label for="img" :value="__('img')" />
+                                <x-text-input id="img" name="img" type="file" class="mt-1 block w-full"
+                                    required autocomplete="img" />
+                                <x-input-error class="mt-2" :messages="$errors->get('img')" />
                             </div>
 
                             <div class="flex items-center gap-4">

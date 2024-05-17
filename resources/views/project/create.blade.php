@@ -41,6 +41,12 @@
                                     :value="old('link')" required autofocus autocomplete="link" />
                                 <x-input-error class="mt-2" :messages="$errors->get('link')" />
                             </div>
+                            <div>
+                                <x-input-label for="img" :value="__('img')" />
+                                <x-text-input id="img" name="img" type="file" class="mt-1 block w-full"
+                                    :value="old('img')" required autofocus autocomplete="img" />
+                                <x-input-error class="mt-2" :messages="$errors->get('img')" />
+                            </div>
 
                             <div class="flex items-center gap-4">
                                 <x-primary-button>{{ __('Save') }}</x-primary-button>

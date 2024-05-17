@@ -54,9 +54,25 @@ class ProjectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Project $project)
+    public function update(Request $request, $id)
     {
-        //
+        $project = Project::where('id', $id)->firstOrFail();
+        if($project){
+            $rules = [
+                'name' => 'required|string|max:100',
+                'description' => 'nullable|string',
+                'link' => 'url|required',
+            ];
+
+            $validatedData = $request->validate($rules);
+
+            Project::where('id', $id)->update($validatedData);
+
+            return redirect('project')->with('success', 'project has been updated!');
+        }
+        else{
+            return 'Project Not Faund';
+        }
     }
 
     /**

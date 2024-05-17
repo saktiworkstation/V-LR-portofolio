@@ -30,7 +30,15 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:100',
+            'description' => 'nullable|string',
+            'link' => 'url|required',
+        ]);
+
+        Project::create($validatedData);
+
+        return redirect('project')->with('success', 'New project has been added!');
     }
 
     /**

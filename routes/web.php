@@ -84,6 +84,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/project/store', [ProjectController::class, 'store'])->name('project.store');
     Route::get('/project/{id}/edit', [ProjectController::class, 'edit']);
     Route::put('/project/{id}/update', [ProjectController::class, 'update']);
+    Route::delete('/project/{id}/delete', [ProjectController::class, 'destroy']);
 });
 
 require __DIR__.'/auth.php';

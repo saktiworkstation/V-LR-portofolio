@@ -2,15 +2,44 @@
 
 Welcome to my personal portfolio template! Below you'll find a brief overview of the features and their current status.
 
-### Features:
+### User Pages:
+1. **Experience Section:**  
+   - Status: Planned  
+   Showcase professional journey and accomplishments.
+
+2. **Education Section:**  
+   - Status: Planned  
+   Highlight educational background and ongoing learning endeavors.
+
+3. **Message Section:**  
+   - Status: Planned 
+   Stay tuned for a personal message from me!
+
+4. **Interest Section:**  
+   - Status: Planned  
+   Coming soon: Discover passions and hobbies.
+
+5. **Project Section:**  
+   - Status: Planned  
+   Exciting projects in the pipeline! Stay tuned for updates.
+
+6. **Skill Section:**  
+   - Status: Planned  
+   Explore skill set and expertise.
+
+6. **Hero Section:**  
+   - Status: In Progress  
+   Explore skill set and expertise.
+
+### Admin Features:
 
 1. **Experience:**  
    - Status: Completed  
-   Showcase my professional journey and accomplishments.
+   Showcase professional journey and accomplishments.
 
 2. **Education:**  
    - Status: Completed  
-   Highlight my educational background and ongoing learning endeavors.
+   Highlight educational background and ongoing learning endeavors.
 
 3. **Message:**  
    - Status: Completed 
@@ -18,15 +47,15 @@ Welcome to my personal portfolio template! Below you'll find a brief overview of
 
 4. **Interest:**  
    - Status: Completed  
-   Coming soon: Discover my passions and hobbies.
+   Coming soon: Discover passions and hobbies.
 
 5. **Project:**  
-   - Status: In Progress  
+   - Status: Completed  
    Exciting projects in the pipeline! Stay tuned for updates.
 
 6. **Skill:**  
    - Status: Completed  
-   Explore my skill set and expertise.
+   Explore skill set and expertise.
 
 ### About Me:
 

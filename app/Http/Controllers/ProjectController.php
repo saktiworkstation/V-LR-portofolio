@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -70,6 +71,13 @@ class ProjectController extends Controller
             ];
 
             $validatedData = $request->validate($rules);
+
+            if ($request->file('img')) {
+                if ($request->oldImg) {
+                    Storage::delete($request->oldImg);
+                }
+                $validatedData['img'] = $request->file('img')->store('project-img');
+            }
 
             Project::where('id', $id)->update($validatedData);
 

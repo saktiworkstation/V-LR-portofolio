@@ -45,10 +45,11 @@
                             </div>
                             <div>
                                 <x-input-label for="img" :value="__('img')" />
-                                <input type="hidden" name="oldImg" value="{{ $data->img }}">
+                                <x-text-input type="hidden" name="oldImg" value="{{ $data->img }}" />
                                 <x-text-input id="img" name="img" type="file" class="mt-1 block w-full"
-                                    required autocomplete="img"" />
+                                    autocomplete="img" />
                                 @if ($data->img != '')
+                                    <x-input-label for="img" :value="__('Old Image')" />
                                     <img src="{{ asset('storage/' . $data->img) }}" alt="">
                                 @endif
                                 <x-input-error class="mt-2" :messages="$errors->get('img')" />

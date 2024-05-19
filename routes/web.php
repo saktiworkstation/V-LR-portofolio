@@ -30,7 +30,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/pdf/schow-cv', [PDFController::class, 'showCV'])->name('pdf-schow-cv');
+Route::get('/pdf/show/cv', [PDFController::class, 'showCV'])->name('showcv');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

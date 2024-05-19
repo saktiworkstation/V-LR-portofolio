@@ -28,8 +28,12 @@
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6 mx-5">
-                @if (Route::has('login'))
-                    <div class="sm:fixed sm:top-0 sm:right-0 p-4 text-right z-10">
+                <div class="sm:fixed sm:top-0 sm:right-0 p-4 text-right z-10">
+                    <x-link-primary-button :url="url('/pdf/show/cv')">
+                        {{ __('CV') }}
+                    </x-link-primary-button>
+
+                    @if (Route::has('login'))
                         @auth
                             <x-link-primary-button :url="route('dashboard')">{{ __('Dashboard') }}</x-link-primary-button>
                         @else
@@ -38,8 +42,8 @@
                                 <x-link-primary-button :url="route('register')">{{ __('Register') }}</x-link-primary-button>
                             @endif
                         @endauth
-                    </div>
-                @endif
+                    @endif
+                </div>
             </div>
 
             <!-- Hamburger -->

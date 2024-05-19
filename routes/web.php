@@ -26,11 +26,12 @@ Route::get('/', function () {
     return view('landing-page');
 })->name('/');
 
+Route::get('/pdf/show/cv', [PDFController::class, 'showCV'])->name('showcv');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/pdf/show/cv', [PDFController::class, 'showCV'])->name('showcv');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

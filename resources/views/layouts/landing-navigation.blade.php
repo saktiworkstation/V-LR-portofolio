@@ -29,7 +29,7 @@
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6 mx-5">
                 <div class="sm:fixed sm:top-0 sm:right-0 p-4 text-right z-10">
-                    <x-link-primary-button :url="url('/pdf/show/cv')">
+                    <x-link-primary-button :url="url('/pdf/show/cv')" target="_blank">
                         {{ __('CV') }}
                     </x-link-primary-button>
 

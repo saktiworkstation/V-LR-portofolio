@@ -31,6 +31,10 @@ Welcome to my personal portfolio template! Below you'll find a brief overview of
    - Status: In Progress  
    Explore skill set and expertise.
 
+6. **CV Download:**  
+   - Status: In Progress  
+   Downloading CV profiles is easier.
+
 ### Admin Features:
 
 1. **Experience:**  

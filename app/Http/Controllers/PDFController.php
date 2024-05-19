@@ -9,4 +9,8 @@ class PDFController extends Controller
     public function showCV(){
         //
     }
+
+    public function downloadCV(){
+        //
+    }
 }

@@ -10,6 +10,8 @@
 
 <body>
     ini cv
+
+    <a href="/pdf/download/cv">Download CV here</a>
 </body>
 
 </html>

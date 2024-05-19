@@ -8,7 +8,7 @@ use App\Models\Interest;
 use App\Models\Project;
 use App\Models\Skill;
 use Illuminate\Http\Request;
-use PDF;
+use Barryvdh\DomPDF\Facade\Pdf as FacadePdf;
 
 class PDFController extends Controller
 {
@@ -23,6 +23,13 @@ class PDFController extends Controller
     }
 
     public function downloadCV(){
-        //
+        $pdf = FacadePdf::loadView('pdf.cv', [
+            'skills' => Skill::latest()->get(),
+            'projects' => Project::latest()->get(),
+            'educations' => Education::latest()->get(),
+            'intereses' => Interest::latest()->get(),
+            'experineces' => Experience::latest()->get(),
+        ]);
+        return $pdf->download('pdf_file.pdf');
     }
 }

@@ -14,6 +14,7 @@
         <div class="row">
             <div class="col-lg-8 bg-black text-white">
                 <h1>User Name</h1>
+                <a href="/pdf/download/cv">Download CV here</a>
             </div>
         </div>
     </div>
@@ -23,4 +24,3 @@
 </body>
 
 </html>
-{{-- <a href="/pdf/download/cv">Download CV here</a> --}}

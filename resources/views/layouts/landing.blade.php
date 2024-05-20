@@ -20,6 +20,16 @@
     <div class="min-h-screen bg-gray-100">
         @include('layouts.landing-navigation')
 
+        @include('landing-partials.hero')
+
+        @include('landing-partials.experience')
+
+        @include('landing-partials.project')
+
+        @include('landing-partials.education')
+
+        @include('landing-partials.skill')
+
     </div>
 </body>
 

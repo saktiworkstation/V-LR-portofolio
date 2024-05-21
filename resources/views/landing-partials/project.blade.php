@@ -8,9 +8,9 @@
       <div class=" flex-none lg:w-1/12"></div>
       <div class="mb-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-4/12 lg:pr-6">
         <div
-          class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
+          class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20 h-96"
           data-te-ripple-init data-te-ripple-color="light">
-          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/028.jpg" class="w-full" alt="Louvre" />
+          <img src="../img/lisa.jpg" class="w-full overflow-hidden" alt="Louvre" />
           <a href="#!">
             <div
               class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
@@ -51,9 +51,9 @@
          <div class=" flex-none lg:w-1/12"></div>
       <div class="mb-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-4/12 lg:pl-6">
         <div
-          class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
+          class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20 h-96"
           data-te-ripple-init data-te-ripple-color="light">
-          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/033.jpg" class="w-full" alt="Louvre" />
+          <img src="../img/anna.jpg" class="w-full overflow-hidden" alt="Louvre" />
           <a href="#!">
             <div
               class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
@@ -96,9 +96,9 @@
       <div class=" flex-none lg:w-1/12"> </div>
       <div class="mb-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-4/12 lg:pr-6">
         <div
-          class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
+          class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20 h-96"
           data-te-ripple-init data-te-ripple-color="light">
-          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/079.jpg" class="w-full" alt="Louvre" />
+          <img src="../img/svan.jpg" class="w-full overflow-hidden" alt="Louvre" />
           <a href="#!">
             <div
               class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">

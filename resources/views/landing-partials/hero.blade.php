@@ -1,11 +1,11 @@
 
 
 <!-- Container -->
-<div class="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
+<div class=" mt-14 relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
 
     <!-- Image Column -->
-    <div class="w-full h-auto max-h-2000 max-w-2000 lg:w-1/2">
-        <img src="https://images.pexels.com/photos/19177009/pexels-photo-19177009/free-photo-of-pria-laki-laki-lelaki-kacamata-hitam.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="foto model" width="2000" height="2000">
+    <div class="w-full max-h-2000 max-w-2000 lg:w-1/2 overflow-hidden h-[500px]">
+        <img src="https://images.pexels.com/photos/19177009/pexels-photo-19177009/free-photo-of-pria-laki-laki-lelaki-kacamata-hitam.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="foto model" >
     </div>
     <!-- Close Image Column -->
 

@@ -7,15 +7,12 @@
    inactiveClasses: 'text-body-color dark:text-dark-6 hover:bg-primary hover:text-white',
    }
    "
-   class="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] dark:bg-dark"
+   class="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-neutral-100 dark:bg-dark"
    >
-   <div class="container mx-auto">
+   <div class="container mx-auto max-w-[70%]">
       <div class="-mx-4 flex flex-wrap">
          <div class="w-full px-4">
-            <div class="mx-auto mb-[60px] max-w-[510px] text-center">
-               <span class="text-primary mb-2 block text-lg font-semibold">
-               Our Portfolio
-               </span>
+            <div class="mx-auto mb-[40px] max-w-[510px] text-center">
                <h2
                   class="text-dark mb-3 text-3xl leading-[1.208] font-bold sm:text-4xl md:text-[40px]"
                   >
@@ -89,16 +86,16 @@
                   <img
                      src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-01.jpg"
                      alt="portfolio"
-                     class="w-full"
+                     class=" w-[350px] mx-auto"
                      />
                </div>
                <div
-                  class="relative z-10 mx-7 -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark"
+                  class="relative z-10 mx-auto -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-dark max-w-72 max-h-40"
                   >
-                  <span class="text-primary mb-2 block text-sm font-medium">
+                  <span class="text-primary mb-1 block text-sm font-medium">
                   Branding
                   </span>
-                  <h3 class="text-dark dark:text-white mb-5 text-xl font-bold">
+                  <h3 class="text-dark dark:text-grey-800 mb-1 text-xl font-bold">
                      Branding Design
                   </h3>
                   <a

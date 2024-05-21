@@ -1,8 +1,8 @@
-<div class="h-screen flex justify-center items-center dark:bg-gray-800">
+<div class="h-screen flex justify-center items-center bg-primary text-white">
     <div class="max-w-xl mx-auto w-full">
 
         <!-- To achieve the desired progress, you can update the 'stroke-dasharray' property. -->
-        <h4 class="text-3xl md:text-5xl dark:text-white font-bold mb-6">Skills</h4>
+        <h4 class="text-3xl md:text-5xl dark:text-black font-bold mb-6">Skills</h4>
 
         <div class="mb-7">
             <div class="flex justify-between py-1">

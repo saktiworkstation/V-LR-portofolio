@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('landing-page');
+    return view('layouts.landing');
 })->name('/');
 
 Route::get('/pdf/show/cv', [PDFController::class, 'showCV'])->name('showcv');

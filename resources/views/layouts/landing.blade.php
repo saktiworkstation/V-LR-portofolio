@@ -29,7 +29,6 @@
         @include('landing-partials.education')
 
         @include('landing-partials.skill')
-
     </div>
 </body>
 

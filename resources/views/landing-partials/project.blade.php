@@ -9,11 +9,11 @@
    x-data="
    {
    showCards: 'all',
-   activeClasses: 'bg-primary text-white',
-   inactiveClasses: 'text-body-color dark:text-dark-6 hover:bg-primary hover:text-white',
+   activeClasses: 'bg-primary text-indigo-700',
+   inactiveClasses: 'text-body-color dark:text-dark-6 hover:bg-primary hover:text-gray-600',
    }
    "
-   class="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-neutral-100 dark:bg-dark"
+   class="pt-20 pb-12 lg:pt-[120px] lg:pb-[50px] bg-neutral-100 dark:bg-dark"
    >
    <div class="container mx-auto max-w-[70%]">
       <div class="-mx-4 flex flex-wrap">
@@ -22,7 +22,7 @@
                <h2
                   class="text-dark mb-3 text-3xl leading-[1.208] font-bold sm:text-4xl md:text-[40px]"
                   >
-                  Our Recent Projects
+                  Recent Projects
                </h2>
                <p class="text-body-color text-base dark:text-dark-6">
                   There are many variations of passages of Lorem Ipsum available
@@ -38,7 +38,7 @@
                   <button
                      @click="showCards = 'all' "
                      :class="showCards == 'all' ? activeClasses : inactiveClasses "
-                     class="inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8"
+                     class="inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8 "
                      >
                   All Projects
                   </button>
@@ -96,17 +96,17 @@
                      />
                </div>
                <div
-                  class="relative z-10 mx-auto -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-dark max-w-72 max-h-40"
+                  class="relative z-10 mx-auto -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-dark max-w-72 max-h-44 hover:shadow-md transition duration-300 ease-in-out"
                   >
                   <span class="text-primary mb-1 block text-sm font-medium">
                   Branding
                   </span>
-                  <h3 class="text-dark dark:text-grey-800 mb-1 text-xl font-bold">
+                  <h3 class="text-dark dark:text-grey-800 mb-2 text-xl font-bold">
                      Branding Design
                   </h3>
                   <a
                      href="javascript:void(0)"
-                     class="text-body-color dark:text-dark-6 hover:border-primary hover:bg-primary inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
+                     class="text-body-color mt-3 dark:text-dark-6 hover:border-indigo-800 hover:bg-indigo-800 inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
                      >
                   View Details
                   </a>
@@ -122,21 +122,21 @@
                   <img
                      src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-02.jpg"
                      alt="portfolio"
-                     class="w-full"
+                     class=" w-[350px] mx-auto"
                      />
                </div>
                <div
-                  class="relative z-10 mx-7 -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark"
+                  class="relative z-10 mx-auto -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-dark max-w-72 max-h-44 hover:shadow-md transition duration-300 ease-in-out"
                   >
                   <span class="text-primary mb-2 block text-sm font-medium">
                   Marketing
                   </span>
-                  <h3 class="text-dark dark:text-white mb-5 text-xl font-bold">
+                  <h3 class="text-dark dark:text-grey-800 mb-2 text-xl font-bold">
                      Best Marketing tips
                   </h3>
                   <a
                      href="javascript:void(0)"
-                     class="text-body-color dark:text-dark-6 hover:border-primary hover:bg-primary inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
+                     class="text-body-color mt-3 dark:text-dark-6 hover:border-indigo-800 hover:bg-indigo-800 inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
                      >
                   View Details
                   </a>
@@ -152,21 +152,21 @@
                   <img
                      src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-03.jpg"
                      alt="portfolio"
-                     class="w-full"
+                     class=" w-[350px] mx-auto"
                      />
                </div>
                <div
-                  class="relative z-10 mx-7 -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark"
+                  class="relative z-10 mx-auto -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-dark max-w-72 max-h-44 hover:shadow-md transition duration-300 ease-in-out"
                   >
                   <span class="text-primary mb-2 block text-sm font-medium">
                   Development
                   </span>
-                  <h3 class="text-dark dark:text-white mb-5 text-xl font-bold">
+                  <h3 class="text-dark dark:text-grey-800 mb-2 text-xl font-bold">
                      Web Design Trend
                   </h3>
                   <a
                      href="javascript:void(0)"
-                     class="text-body-color dark:text-dark-6 hover:border-primary hover:bg-primary inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
+                     class="text-body-color mt-3 dark:text-dark-6 hover:border-indigo-800 hover:bg-indigo-800 inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
                      >
                   View Details
                   </a>
@@ -182,21 +182,21 @@
                   <img
                      src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-04.jpg"
                      alt="portfolio"
-                     class="w-full"
+                     class=" w-[350px] mx-auto"
                      />
                </div>
                <div
-                  class="relative z-10 mx-7 -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark"
+                  class="relative z-10 mx-auto -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-dark max-w-72 max-h-44 hover:shadow-md transition duration-300 ease-in-out"
                   >
                   <span class="text-primary mb-2 block text-sm font-medium">
                   Design
                   </span>
-                  <h3 class="text-dark dark:text-white mb-5 text-xl font-bold">
+                  <h3 class="text-dark dark:text-grey-800 mb-2 text-xl font-bold">
                      Business Card Design
                   </h3>
                   <a
                      href="javascript:void(0)"
-                     class="text-body-color dark:text-dark-6 hover:border-primary hover:bg-primary inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
+                     class="text-body-color mt-3 dark:text-dark-6 hover:border-indigo-800 hover:bg-indigo-800 inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
                      >
                   View Details
                   </a>
@@ -212,21 +212,21 @@
                   <img
                      src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-05.jpg"
                      alt="portfolio"
-                     class="w-full"
+                     class=" w-[350px] mx-auto"
                      />
                </div>
                <div
-                  class="relative z-10 mx-7 -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark"
+                  class="relative z-10 mx-auto -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-dark max-w-72 max-h-44 hover:shadow-md transition duration-300 ease-in-out"
                   >
                   <span class="text-primary mb-2 block text-sm font-medium">
                   Marketing
                   </span>
-                  <h3 class="text-dark dark:text-white mb-5 text-xl font-bold">
+                  <h3 class="text-dark dark:text-grey-800 mb-2 text-xl font-bold">
                      Digital marketing
                   </h3>
                   <a
                      href="javascript:void(0)"
-                     class="text-body-color dark:text-dark-6 hover:border-primary hover:bg-primary inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
+                     class="text-body-color mt-3 dark:text-dark-6 hover:border-indigo-800 hover:bg-indigo-800 inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
                      >
                   View Details
                   </a>
@@ -242,21 +242,21 @@
                   <img
                      src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-06.jpg"
                      alt="portfolio"
-                     class="w-full"
+                     class=" w-[350px] mx-auto"
                      />
                </div>
                <div
-                  class="relative z-10 mx-7 -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark"
+                  class="relative z-10 mx-auto -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-dark max-w-72 max-h-44 hover:shadow-md transition duration-300 ease-in-out"
                   >
                   <span class="text-primary mb-2 block text-sm font-medium">
                   Branding
                   </span>
-                  <h3 class="text-dark dark:text-white mb-5 text-xl font-bold">
+                  <h3 class="text-dark dark:text-grey-800 mb-2 text-xl font-bold">
                      Creative Agency
                   </h3>
                   <a
                      href="javascript:void(0)"
-                     class="text-body-color dark:text-dark-6 hover:border-primary hover:bg-primary inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
+                     class="text-body-color mt-3 dark:text-dark-6 hover:border-indigo-800 hover:bg-indigo-800 inline-block rounded-md border border-stroke dark:border-dark-3 py-[10px] px-7 text-sm font-medium transition hover:text-white"
                      >
                   View Details
                   </a>

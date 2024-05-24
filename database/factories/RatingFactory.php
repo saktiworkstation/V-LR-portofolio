@@ -17,7 +17,9 @@ class RatingFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'user_id' => 1,
+            'content' => 'Sangat membantu dan mudah digunakan',
+            'star' => 5
         ];
     }
 }

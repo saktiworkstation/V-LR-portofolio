@@ -9,6 +9,7 @@ use App\Models\Experience;
 use App\Models\Interest;
 use App\Models\Message;
 use App\Models\Project;
+use App\Models\Rating;
 use App\Models\Skill;
 use Illuminate\Database\Seeder;
 
@@ -32,5 +33,6 @@ class DatabaseSeeder extends Seeder
         Message::factory(10)->create();
         Skill::factory(10)->create();
         Project::factory(10)->create();
+        Rating::factory(1)->create();
     }
 }

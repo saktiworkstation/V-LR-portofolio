@@ -54,12 +54,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/education', [EducationController::class, 'index'])->name('education');
-    Route::get('/education/create', [EducationController::class, 'create'])->name('education.create');
-    Route::post('/education/store', [EducationController::class, 'store'])->name('education.store');
-    Route::get('/education/{id}/edit', [EducationController::class, 'edit']);
-    Route::put('/education/{id}/update', [EducationController::class, 'update']);
-    Route::delete('/education/{id}/delete', [EducationController::class, 'destroy']);
+    Route::controller(EducationController::class)->group(function () {
+        Route::get('/education', 'index')->name('education');
+        Route::get('/education/create', 'create')->name('education.create');
+        Route::post('/education/store', 'store')->name('education.store');
+        Route::get('/education/{id}/edit', 'edit');
+        Route::put('/education/{id}/update', 'update');
+        Route::delete('/education/{id}/delete', 'destroy');
+    });
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {

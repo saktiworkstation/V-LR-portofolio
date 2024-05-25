@@ -13,7 +13,7 @@
             <div class="flex justify-center h-auto items-start pt-12 px-4">
                 <div class="w-auto max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow-2xl">
                     <div class="content-center items-center flex justify-start">
-                        <img src="/img/testimoni/satu.png" alt=""
+                        <img src="/img/rating/satu.png" alt=""
                             class="w-64 bg-gradient-to-br h-40 from-green-600 to-emerald-400 rounded-lg shadow ">
                     </div>
                     <div class="my-2 h-auto text-center w-64">
@@ -30,11 +30,11 @@
 
                         <div class="space-y-1  my-2">
                             <p class="font-bold text-xs text-gray-600 items-center flex justify-center content-center">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/kstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/kstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
                             </p>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
             <div class="flex justify-center h-auto items-start pt-12 px-4">
                 <div class="w-auto max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow-2xl">
                     <div class="content-center items-center flex justify-start">
-                        <img src="/img/testimoni/dua.png" alt=""
+                        <img src="/img/rating/dua.png" alt=""
                             class="w-64 bg-gradient-to-br h-40 from-green-600 to-emerald-400 rounded-lg shadow ">
                     </div>
                     <div class="my-2 h-auto text-center w-64">
@@ -62,11 +62,11 @@
 
                         <div class="space-y-1  my-2">
                             <p class="font-bold text-xs text-gray-600 items-center flex justify-center content-center">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/kstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/kstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
                             </p>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
             <div class="flex justify-center h-auto items-start pt-12 px-4">
                 <div class="w-auto max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow-2xl">
                     <div class="content-center items-center flex justify-start">
-                        <img src="/img/testimoni/tiga.png" alt=""
+                        <img src="/img/rating/tiga.png" alt=""
                             class="w-64 bg-gradient-to-br h-40 from-green-600 to-emerald-400 rounded-lg shadow ">
                     </div>
                     <div class="my-2 h-auto text-center w-64">
@@ -93,11 +93,11 @@
 
                         <div class="space-y-1  my-2">
                             <p class="font-bold text-xs text-gray-600 items-center flex justify-center content-center">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                <img src="/img/paket/kstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/rating/kstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
                             </p>
                         </div>
                     </div>

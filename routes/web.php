@@ -94,12 +94,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/project', [ProjectController::class, 'index'])->name('project');
-    Route::get('/project/create', [ProjectController::class, 'create'])->name('project.create');
-    Route::post('/project/store', [ProjectController::class, 'store'])->name('project.store');
-    Route::get('/project/{id}/edit', [ProjectController::class, 'edit']);
-    Route::put('/project/{id}/update', [ProjectController::class, 'update']);
-    Route::delete('/project/{id}/delete', [ProjectController::class, 'destroy']);
+    Route::controller(ProjectController::class)->group(function () {
+        Route::get('/project', 'index')->name('project');
+        Route::get('/project/create', 'create')->name('project.create');
+        Route::post('/project/store', 'store')->name('project.store');
+        Route::get('/project/{id}/edit', 'edit');
+        Route::put('/project/{id}/update', 'update');
+        Route::delete('/project/{id}/delete', 'destroy');
+    });
 });
 
 require __DIR__.'/auth.php';

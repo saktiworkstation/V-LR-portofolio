@@ -65,12 +65,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/interest', [InterestController::class, 'index'])->name('interest');
-    Route::get('/interest/create', [InterestController::class, 'create'])->name('interest.create');
-    Route::post('/interest/store', [InterestController::class, 'store'])->name('interest.store');
-    Route::get('/interest/{id}/edit', [InterestController::class, 'edit']);
-    Route::put('/interest/{id}/update', [InterestController::class, 'update']);
-    Route::delete('/interest/{id}/delete', [InterestController::class, 'destroy']);
+    Route::controller(InterestController::class)->group(function () {
+        Route::get('/interest', 'index')->name('interest');
+        Route::get('/interest/create', 'create')->name('interest.create');
+        Route::post('/interest/store', 'store')->name('interest.store');
+        Route::get('/interest/{id}/edit', 'edit');
+        Route::put('/interest/{id}/update', 'update');
+        Route::delete('/interest/{id}/delete', 'destroy');
+    });
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {

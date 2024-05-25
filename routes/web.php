@@ -83,12 +83,14 @@ Route::get('/message/create', [MessageController::class, 'create'])->name('messa
 Route::post('/message/store', [MessageController::class, 'store'])->name('message.store');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/skill', [SkillController::class, 'index'])->name('skill');
-    Route::get('/skill/create', [SkillController::class, 'create'])->name('skill.create');
-    Route::post('/skill/store', [SkillController::class, 'store'])->name('skill.store');
-    Route::get('/skill/{id}/edit', [SkillController::class, 'edit']);
-    Route::put('/skill/{id}/update', [SkillController::class, 'update']);
-    Route::delete('/skill/{id}/delete', [SkillController::class, 'destroy']);
+    Route::controller(SkillController::class)->group(function () {
+        Route::get('/skill', 'index')->name('skill');
+        Route::get('/skill/create', 'create')->name('skill.create');
+        Route::post('/skill/store', 'store')->name('skill.store');
+        Route::get('/skill/{id}/edit', 'edit');
+        Route::put('/skill/{id}/update', 'update');
+        Route::delete('/skill/{id}/delete', 'destroy');
+    });
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {

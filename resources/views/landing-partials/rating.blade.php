@@ -1,1 +1,114 @@
+<div class="container px-40 py-10">
+    <div class="grid-rows-4">
+        <div class="grid-rows-2 content-center text-center">
+            <h1 class="text-4xl font-bold mb-5 text-slate-700">
+                Testimoni
+            </h1>
+            <p>#Apa yang pelanggan kami katakan tentang kami</p>
+        </div>
 
+        {{-- Card --}}
+        <div class="grid-rows-1 flex justify-center h-auto items-center relative">
+            {{-- Newman start --}}
+            <div class="flex justify-center h-auto items-start pt-12 px-4">
+                <div class="w-auto max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow-2xl">
+                    <div class="content-center items-center flex justify-start">
+                        <img src="/img/testimoni/satu.png" alt=""
+                            class="w-64 bg-gradient-to-br h-40 from-green-600 to-emerald-400 rounded-lg shadow ">
+                    </div>
+                    <div class="my-2 h-auto text-center w-64">
+                        <h1 class="text-lg font-bold tracking-tight text-slate-700">
+                            Ryan Newman
+                        </h1>
+                        <p class="font-bold text-xs text-gray-600">Data Analyst at Microsoft
+                        </p>
+
+                        <p class="font-bold text-xs text-gray-600 pt-6">"We've used Wesclic University for the last 2
+                            years. Thanks for the great service."
+                        </p>
+
+
+                        <div class="space-y-1  my-2">
+                            <p class="font-bold text-xs text-gray-600 items-center flex justify-center content-center">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/kstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Megan start --}}
+            <div class="flex justify-center h-auto items-start pt-12 px-4">
+                <div class="w-auto max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow-2xl">
+                    <div class="content-center items-center flex justify-start">
+                        <img src="/img/testimoni/dua.png" alt=""
+                            class="w-64 bg-gradient-to-br h-40 from-green-600 to-emerald-400 rounded-lg shadow ">
+                    </div>
+                    <div class="my-2 h-auto text-center w-64">
+                        <h1 class="text-lg font-bold tracking-tight text-slate-700">
+                            Megan Hayward
+                        </h1>
+                        <p class="font-bold text-xs text-gray-600">System Administrator at Amazon
+                        </p>
+
+                        <p class="font-bold text-xs text-gray-600 pt-6">"We're loving it. Wesclic University is both
+                            perfect and highly adaptable."
+                        </p>
+
+
+                        <div class="space-y-1  my-2">
+                            <p class="font-bold text-xs text-gray-600 items-center flex justify-center content-center">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/kstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Hope start --}}
+            <div class="flex justify-center h-auto items-start pt-12 px-4">
+                <div class="w-auto max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow-2xl">
+                    <div class="content-center items-center flex justify-start">
+                        <img src="/img/testimoni/tiga.png" alt=""
+                            class="w-64 bg-gradient-to-br h-40 from-green-600 to-emerald-400 rounded-lg shadow ">
+                    </div>
+                    <div class="my-2 h-auto text-center w-64">
+                        <h1 class="text-lg font-bold tracking-tight text-slate-700">
+                            Natasha Hope
+                        </h1>
+                        <p class="font-bold text-xs text-gray-600">IT Technician at IBM
+                        </p>
+
+                        <p class="font-bold text-xs text-gray-600 pt-6">"I am really satisfied with my Wesclic
+                            University. It's the perfect solution for bussiness
+                        </p>
+
+                        <div class="space-y-1  my-2">
+                            <p class="font-bold text-xs text-gray-600 items-center flex justify-center content-center">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                <img src="/img/paket/kstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Side button --}}
+            <a href="#" rel="noopener noreferrer"
+                class="absolute end-6 bottom-48 inline-flex items-center px-4 py-4 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white tracking-widest hover:bg-gray-700 my-5">→</a>
+            <a href="#" rel="noopener noreferrer"
+                class="absolute start-6 bottom-48 inline-flex items-center px-4 py-4 bg-white-800 border  rounded-md font-semibold text-xs text-black tracking-widest hover:bg-white-700 my-5 shadow-md">←</a>
+        </div>
+    </div>
+</div>

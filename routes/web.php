@@ -8,6 +8,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\RatingController;
 use App\Http\Controllers\SkillController;
 use Illuminate\Support\Facades\Route;
 
@@ -101,6 +102,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/project/{id}/edit', 'edit');
         Route::put('/project/{id}/update', 'update');
         Route::delete('/project/{id}/delete', 'destroy');
+    });
+});
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::controller(RatingController::class)->group(function () {
+        Route::get('/rating', 'index')->name('rating');
     });
 });
 

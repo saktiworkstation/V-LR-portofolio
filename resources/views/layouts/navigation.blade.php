@@ -39,6 +39,10 @@
                     <x-nav-link :href="route('project')" :active="request()->routeIs('project')">
                         {{ __('Project') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('rating')" :active="request()->routeIs('rating')">
+                        {{ __('Rating') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -119,6 +123,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('project')" :active="request()->routeIs('project')">
                 {{ __('Project') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('rating')" :active="request()->routeIs('rating')">
+                {{ __('Rating') }}
             </x-responsive-nav-link>
         </div>
 

@@ -34,14 +34,6 @@ class RatingController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(Rating $rating)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(Rating $rating)

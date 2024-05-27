@@ -60,8 +60,9 @@ class RatingController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Rating $rating)
+    public function destroy($id)
     {
-        //
+        Rating::destroy($id);
+        return redirect('rating')->with('success', 'Rating has been deleted!');
     }
 }

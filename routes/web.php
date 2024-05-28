@@ -110,6 +110,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/rating', 'index')->name('rating');
         Route::get('/rating/user', 'user')->name('rating.user');
         Route::post('/rating/store', 'store')->name('rating.store');
+        Route::get('/rating/{id}/edit', 'edit');
+        Route::put('/rating/{id}/update', 'update');
     });
 });
 

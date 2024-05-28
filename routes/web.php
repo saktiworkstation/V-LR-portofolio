@@ -111,6 +111,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/rating/user', 'user')->name('rating.user');
         Route::post('/rating/store', 'store')->name('rating.store');
         Route::put('/rating/{id}/update', 'update');
+        Route::delete('/rating/{id}/delete', 'destroy');
     });
 });
 

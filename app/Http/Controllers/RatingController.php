@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Rating;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RatingController extends Controller
 {
@@ -22,7 +23,15 @@ class RatingController extends Controller
      */
     public function user()
     {
-        return view('rating.create');
+        $id = Auth::user()->id;
+
+        try {
+            return view('rating.edit',[
+                'data' => Rating::where('user_id', $id)->firstOrFail(),
+            ]);
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            return view('rating.create');
+        }
     }
 
     /**

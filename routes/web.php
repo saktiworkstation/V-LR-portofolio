@@ -105,8 +105,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
 });
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::controller(RatingController::class)->group(function () {
+Route::controller(RatingController::class)->group(function () {
+    Route::get('/rating/user', 'index')->name('rating.user');
+
+    Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/rating', 'index')->name('rating');
     });
 });

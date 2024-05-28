@@ -22,7 +22,7 @@ class RatingController extends Controller
      */
     public function user()
     {
-        //
+        return view('rating.create');
     }
 
     /**

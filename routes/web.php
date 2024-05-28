@@ -105,11 +105,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
 });
 
-Route::controller(RatingController::class)->group(function () {
-    Route::get('/rating/user', 'index')->name('rating.user');
-
-    Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::controller(RatingController::class)->group(function () {
         Route::get('/rating', 'index')->name('rating');
+        Route::get('/rating/user', 'user')->name('rating.user');
+        Route::post('/rating/store', 'store')->name('rating.store');
     });
 });
 

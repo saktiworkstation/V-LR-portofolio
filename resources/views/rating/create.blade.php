@@ -30,8 +30,8 @@
                             </div>
                             <div>
                                 <x-input-label for="star" :value="__('star')" />
-                                <x-text-input id="star" name="star" type="text" class="mt-1 block w-full"
-                                    :value="old('star')" required />
+                                <x-text-input id="star" name="star" type="number" class="mt-1 block w-full"
+                                    :value="old('star')" required placeholder="1-5" />
                                 <x-input-error class="mt-2" :messages="$errors->get('star')" />
                             </div>
 

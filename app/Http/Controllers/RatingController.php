@@ -39,7 +39,16 @@ class RatingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'content' => 'required|string',
+            'star' => 'required|in:1,2,3,4,5',
+        ]);
+
+        $validatedData['user_id'] = Auth::user()->id;
+
+        Rating::create($validatedData);
+
+        return redirect('rating')->with('success', 'New rating has been added!');
     }
 
     /**

@@ -69,7 +69,7 @@
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('reting.my')">
+                        <x-dropdown-link :href="route('reting.user')">
                             {{ __('My Rating') }}
                         </x-dropdown-link>
 
@@ -143,7 +143,7 @@
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('rating.my')">
+                <x-responsive-nav-link :href="route('rating.user')">
                     {{ __('My Rating') }}
                 </x-responsive-nav-link>
 

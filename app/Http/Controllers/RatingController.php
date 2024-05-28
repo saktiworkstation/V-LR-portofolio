@@ -54,9 +54,24 @@ class RatingController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Rating $rating)
+    public function update(Request $request, $id)
     {
-        //
+        $rating = Rating::where('id', $id)->firstOrFail();
+        if($rating){
+            $rules = [
+                'content' => 'required|string',
+                'star' => 'required|in:1,2,3,4,5',
+            ];
+
+            $validatedData = $request->validate($rules);
+
+            Rating::where('id', $id)->update($validatedData);
+
+            return redirect('rating')->with('success', 'Rating has been updated!');
+        }
+        else{
+            return 'Rating Not Faund';
+        }
     }
 
     /**

@@ -1,7 +1,7 @@
 {{-- hero start --}}
-<div class="container px-40 py-40 bg-gradient-to-t from-slate-200">
-    <div class="row flex justify-center h-96 items-center">
-        <div class="w-1/2">
+<div class="container mx-auto pt-20 pb-20">
+    <div class="row max-w-[90%] mx-auto flex justify-center h-auto items-center">
+        <div class="w-1/2 ps-40 pe-5 py-5">
             {{-- Content --}}
             <h1 class="text-4xl font-bold mb-5 text-slate-700">
                 Learn Without Limits

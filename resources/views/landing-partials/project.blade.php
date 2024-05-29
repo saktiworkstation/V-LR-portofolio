@@ -11,7 +11,7 @@
     inactiveClasses: 'text-body-color dark:text-dark-6 hover:bg-primary hover:text-gray-600',
 }"
     class="pt-20 pb-12 lg:pt-[120px] lg:pb-[50px] bg-neutral-100 dark:bg-dark">
-    <div class="container mx-auto max-w-[70%]">
+    <div class="container mx-auto max-w-[80%]">
         <div class="-mx-4 flex flex-wrap">
             <div class="w-full px-4">
                 <div class="mx-auto mb-[40px] max-w-[510px] text-center">
@@ -68,7 +68,7 @@
         </div>
         <div class="-mx-4 flex flex-wrap">
             <div :class="showCards == 'all' || showCards == 'branding' ? 'block' : 'hidden'"
-                class="w-full px-4 md:w-1/2 xl:w-1/3">
+                class="lg:w-4/12 px-4 md:w-1/2 xl:w-1/3">
                 <div class="relative mb-12">
                     <div class="overflow-hidden rounded-[10px]">
                         <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-01.jpg"
@@ -90,7 +90,7 @@
                 </div>
             </div>
             <div :class="showCards == 'all' || showCards == 'marketing' ? 'block' : 'hidden'"
-                class="w-full px-4 md:w-1/2 xl:w-1/3">
+                class="lg:w-4/12 px-4 md:w-1/2 xl:w-1/3">
                 <div class="relative mb-12">
                     <div class="overflow-hidden rounded-[10px]">
                         <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-02.jpg"
@@ -112,7 +112,7 @@
                 </div>
             </div>
             <div :class="showCards == 'all' || showCards == 'development' ? 'block' : 'hidden'"
-                class="w-full px-4 md:w-1/2 xl:w-1/3">
+                class="lg:w-4/12 px-4 md:w-1/2 xl:w-1/3">
                 <div class="relative mb-12">
                     <div class="overflow-hidden rounded-[10px]">
                         <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-03.jpg"
@@ -134,7 +134,7 @@
                 </div>
             </div>
             <div :class="showCards == 'all' || showCards == 'design' ? 'block' : 'hidden'"
-                class="w-full px-4 md:w-1/2 xl:w-1/3">
+                class="lg:w-4/12 px-4 md:w-1/2 xl:w-1/3">
                 <div class="relative mb-12">
                     <div class="overflow-hidden rounded-[10px]">
                         <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-04.jpg"
@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div :class="showCards == 'all' || showCards == 'marketing' ? 'block' : 'hidden'"
-                class="w-full px-4 md:w-1/2 xl:w-1/3">
+                class="lg:w-4/12 px-4 md:w-1/2 xl:w-1/3">
                 <div class="relative mb-12">
                     <div class="overflow-hidden rounded-[10px]">
                         <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-05.jpg"
@@ -178,7 +178,7 @@
                 </div>
             </div>
             <div :class="showCards == 'all' || showCards == 'branding' ? 'block' : 'hidden'"
-                class="w-full px-4 md:w-1/2 xl:w-1/3">
+                class="lg:w-4/12 px-4 md:w-1/2 xl:w-1/3">
                 <div class="relative mb-12">
                     <div class="overflow-hidden rounded-[10px]">
                         <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-06.jpg"

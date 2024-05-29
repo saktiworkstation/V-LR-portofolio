@@ -1,4 +1,4 @@
-<div class="container px-40 py-10">
+<div class="container mx-auto px-40 pt-10 pb-40">
     <div class="grid-rows-4">
         <div class="grid-rows-2 content-center text-center">
             <h1 class="text-4xl font-bold mb-5 text-slate-700">

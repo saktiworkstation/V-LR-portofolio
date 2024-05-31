@@ -13,6 +13,7 @@ use App\Http\Controllers\SkillController;
 use App\Models\Education;
 use App\Models\Experience;
 use App\Models\Interest;
+use App\Models\Project;
 use App\Models\Skill;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,7 @@ Route::get('/', function () {
         'educations' => Education::latest()->get(),
         'interests' => Interest::latest()->get(),
         'skils' => Skill::latest()->get(),
+        'projects' => Project::latest()->get(),
     ]);
 })->name('/');
 

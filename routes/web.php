@@ -29,6 +29,7 @@ Route::get('/', function () {
     return view('layouts.landing',[
         'experiences' => Experience::latest()->get(),
         'educations' => Education::latest()->get(),
+        'interests' => Education::latest()->get(),
     ]);
 })->name('/');
 

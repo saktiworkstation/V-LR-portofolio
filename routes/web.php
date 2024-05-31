@@ -14,6 +14,7 @@ use App\Models\Education;
 use App\Models\Experience;
 use App\Models\Interest;
 use App\Models\Project;
+use App\Models\Rating;
 use App\Models\Skill;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,7 @@ Route::get('/', function () {
         'interests' => Interest::latest()->get(),
         'skils' => Skill::latest()->get(),
         'projects' => Project::latest()->get(),
+        'ratings' => Rating::latest()->get(),
     ]);
 })->name('/');
 

@@ -10,6 +10,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\RatingController;
 use App\Http\Controllers\SkillController;
+use App\Models\Education;
 use App\Models\Experience;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.landing',[
         'experiences' => Experience::latest()->get(),
+        'educations' => Education::latest()->get(),
     ]);
 })->name('/');
 

@@ -19,25 +19,19 @@
                         </div>
                         <div class="my-2 h-auto text-center w-64">
                             <h1 class="text-lg font-bold tracking-tight text-slate-700">
-                                Ryan Newman
+                                {{ $item->user_id }}
                             </h1>
                             <p class="font-bold text-xs text-gray-600">Data Analyst at Microsoft
                             </p>
 
-                            <p class="font-bold text-xs text-gray-600 pt-6">"We've used Wesclic University for the last
-                                2
-                                years. Thanks for the great service."
+                            <p class="font-bold text-xs text-gray-600 pt-6">"{{ $item->content }}"
                             </p>
-
 
                             <div class="space-y-1  my-2">
                                 <p
                                     class="font-bold text-xs text-gray-600 items-center flex justify-center content-center">
-                                    <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                    <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                    <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                    <img src="/img/rating/fstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
-                                    <img src="/img/rating/kstar.png" alt="" class="w-4 h-4 mt-4 mx-1">
+                                    Rating : {{ $item->star }} <img src="/img/rating/fstar.png" alt=""
+                                        class="w-4 h-4 mx-2">
                                 </p>
                             </div>
                         </div>

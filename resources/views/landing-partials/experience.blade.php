@@ -13,8 +13,8 @@
 
         <p class="font-normal text-gray-500 text-xs md:text-base mb-20">Below is a summary of the places I Experience</p>
 
-        @foreach ($experiences as $item)
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                @foreach ($experiences as $item)
                 <div data-aos="flip-left"
                     class="bg-gray-50 px-8 py-10 rounded-md hover:shadow-md transition duration-300 ease-in-out">
                     <h4 class="font-medium text-gray-700 text-lg mb-4">{{ $item->duration }}</h4>
@@ -26,8 +26,8 @@
                         <span class="w-32 h-1 bg-cyan-200 absolute bottom-1 left-0 z-0"></span>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
 
     </div>
 

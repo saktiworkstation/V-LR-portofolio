@@ -1,6 +1,6 @@
 {{-- Interest pabe --}}
 {{-- card start --}}
-<div class="py-12 px-40 container bg-gradient-to-t from-slate-200 text-center">
+<div class="py-12 px-40 mx-auto container bg-gradient-to-t from-slate-200 text-center">
     <h4 class="text-3xl md:text-5xl dark:text-black font-bold mb-6">Interest</h4>
     <div class="row flex justify-center h-auto items-center ">
         @foreach ($interests as $item)

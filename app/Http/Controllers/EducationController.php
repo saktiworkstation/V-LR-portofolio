@@ -14,7 +14,7 @@ class EducationController extends Controller
     public function index()
     {
         return view('education.index',[
-            'educations' => Education::latest()->get(),
+            'educations' => Education::where('user_id', Auth::user()->id)->latest()->get(),
         ]);
     }
 
@@ -37,6 +37,8 @@ class EducationController extends Controller
             'education_name' => 'required|max:100',
             'graduation_year' => 'required|max:50',
         ]);
+
+            $validatedData['user_id'] = Auth::user()->id;
 
         Education::create($validatedData);
 
@@ -66,8 +68,6 @@ class EducationController extends Controller
                 'education_name' => 'required|max:100',
                 'graduation_year' => 'required|max:50',
             ];
-
-            $validatedData['user_id'] = Auth::user()->id;
 
             $validatedData = $request->validate($rules);
 

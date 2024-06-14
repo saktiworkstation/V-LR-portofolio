@@ -62,21 +62,26 @@ class ExperienceController extends Controller
     public function update($id, Request $request)
     {
         $experience = Experience::where('id', $id)->firstOrFail();
-        $rules = [
-            'company' => 'required|max:255',
-            'duration' => 'required|max:255',
-            'field' => 'required',
-        ];
+        if ($experience && $experience->user_id == Auth::user()->id) {
+            $rules = [
+                'company' => 'required|max:255',
+                'duration' => 'required|max:255',
+                'field' => 'required',
+            ];
 
-        if ($request->order != $experience->order) {
-            $rules['order'] = 'required|numeric|unique:experiences';
+            if ($request->order != $experience->order) {
+                $rules['order'] = 'required|numeric|unique:experiences';
+            }
+
+            $validatedData = $request->validate($rules);
+
+            Experience::where('id', $id)->update($validatedData);
+
+            return redirect('experience')->with('success', 'experience has been updated!');
         }
-
-        $validatedData = $request->validate($rules);
-
-        Experience::where('id', $id)->update($validatedData);
-
-        return redirect('experience')->with('success', 'experience has been updated!');
+        else {
+            return 'Experience Not Faund';
+        }
     }
 
     /**

@@ -60,7 +60,8 @@ class SkillController extends Controller
     public function update(Request $request, $id)
     {
         $skill = Skill::where('id', $id)->firstOrFail();
-        if($skill){
+
+        if($skill && $skill->user_id == Auth::user()->id){
             $rules = [
                 'name' => 'required|string|max:100',
                 'description' => 'nullable|string',

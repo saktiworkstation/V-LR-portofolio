@@ -66,7 +66,7 @@ class ProjectController extends Controller
     public function update(Request $request, $id)
     {
         $project = Project::where('id', $id)->firstOrFail();
-        if($project){
+        if($project && $project->user_id == Auth::user()->id){
             $rules = [
                 'name' => 'required|string|max:100',
                 'description' => 'nullable|string',

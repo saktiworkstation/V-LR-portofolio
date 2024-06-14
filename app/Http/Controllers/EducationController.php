@@ -61,7 +61,7 @@ class EducationController extends Controller
     public function update(Request $request, $id)
     {
         $education = Education::where('id', $id)->firstOrFail();
-        if($education){
+        if($education && $education->user_id == Auth::user()->id){
             $rules = [
                 'degree' => 'required|max:70',
                 'field_of_study' => 'required|max:100',

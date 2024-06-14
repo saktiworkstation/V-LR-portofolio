@@ -58,7 +58,7 @@ class InterestController extends Controller
     public function update(Request $request, $id)
     {
         $interest = Interest::where('id', $id)->firstOrFail();
-        if($interest){
+        if($interest && $interest->user_id == Auth::user()->id){
             $rules = [
                 'interest' => 'required|max:70',
             ];

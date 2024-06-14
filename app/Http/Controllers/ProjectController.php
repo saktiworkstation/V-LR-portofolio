@@ -15,7 +15,7 @@ class ProjectController extends Controller
     public function index()
     {
         return view('project.index',[
-            'datas' => Project::latest()->get(),
+            'datas' => Project::where('user_id', Auth::user()->id)->latest()->get(),
         ]);
     }
 

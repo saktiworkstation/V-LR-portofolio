@@ -14,7 +14,7 @@ class SkillController extends Controller
     public function index()
     {
         return view('skill.index',[
-            'datas' => Skill::latest()->get(),
+            'datas' => Skill::where('user_id', Auth::user()->id)->latest()->get(),
         ]);
     }
 

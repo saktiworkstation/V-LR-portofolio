@@ -1,7 +1,7 @@
 <div class="container mx-auto px-40 pt-10 pb-40">
     <div class="grid-rows-4">
         <div class="grid-rows-2 content-center text-center">
-            <h1 class="text-4xl font-bold mb-5 text-slate-700">
+            <h1 class="text-4xl font-bold mb-5 text-slate-700 animate-bounce">
                 Testimoni
             </h1>
             <p>#Apa yang pelanggan kami katakan tentang kami</p>
@@ -47,3 +47,26 @@
         </div>
     </div>
 </div>
+
+
+<!-- ====== rating Section End -->
+
+<style>
+    @keyframes bounce {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+            /* Bounce height */
+        }
+    }
+
+    .animate-bounce {
+        animation: bounce 1.2s ease-in-out infinite;
+        /* Animation settings */
+    }
+</style>

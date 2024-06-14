@@ -73,9 +73,14 @@
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('rating.user')">
-                            {{ __('My Rating') }}
-                        </x-dropdown-link>
+                        @role('user')
+                            <x-dropdown-link :href="route('rating.user')">
+                                {{ __('My Rating') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('showcv')">
+                                {{ __('My CV Look') }}
+                            </x-dropdown-link>
+                        @endrole
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
@@ -151,9 +156,14 @@
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('rating.user')">
-                    {{ __('My Rating') }}
-                </x-responsive-nav-link>
+                @role('user')
+                    <x-responsive-nav-link :href="route('rating.user')">
+                        {{ __('My Rating') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('showcv')">
+                        {{ __('My CV Look') }}
+                    </x-responsive-nav-link>
+                @endrole
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">

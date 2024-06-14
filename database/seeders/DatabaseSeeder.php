@@ -53,9 +53,9 @@ class DatabaseSeeder extends Seeder
         $roleUser->givePermissionTo('cv manage');
 
         $user = User::create([
-            'name' => 'Sakti',
-            'username' => 'sakti',
-            'email' => 'sakti@gmail.com',
+            'name' => 'User',
+            'username' => 'user',
+            'email' => 'user@gmail.com',
             'password' => bcrypt('password'),
             'email_verified_at' => now()
         ]);

@@ -20,6 +20,7 @@ class ExperienceFactory extends Factory
         $endYear = fake()->numberBetween($startYear, 2024);
         $duration = $startYear . '-' . $endYear;
         return [
+            'user_id' => mt_rand(1, 2),
             'company' => fake()->company,
             'order' => mt_rand(1, 100),
             'field' => fake()->word,

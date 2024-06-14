@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Experience;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ExperienceController extends Controller
 {
@@ -36,6 +37,8 @@ class ExperienceController extends Controller
             'field' => 'required',
             'order' => 'required|numeric|unique:experiences',
         ]);
+
+        $validatedData['user_id'] = Auth::user()->id;
 
         Experience::create($validatedData);
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
@@ -37,6 +38,8 @@ class ProjectController extends Controller
             'img' => 'image',
             'link' => 'url|required',
         ]);
+
+        $validatedData['user_id'] = Auth::user()->id;
 
         if ($request->file('img')) {
             $validatedData['img'] = $request->file('img')->store('project-img');

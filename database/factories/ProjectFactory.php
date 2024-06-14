@@ -17,6 +17,7 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
+            'user_id' => mt_rand(1, 2),
             'name' => $this->faker->sentence,
             'description' => $this->faker->paragraph,
             'img' => '',

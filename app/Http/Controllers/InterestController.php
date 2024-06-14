@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Interest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class InterestController extends Controller
 {
@@ -33,6 +34,8 @@ class InterestController extends Controller
         $validatedData = $request->validate([
             'interest' => 'required|max:70'
         ]);
+
+        $validatedData['user_id'] = Auth::user()->id;
 
         Interest::create($validatedData);
 

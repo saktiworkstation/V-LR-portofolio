@@ -17,6 +17,7 @@ class InterestFactory extends Factory
     public function definition(): array
     {
         return [
+            'user_id' => mt_rand(1, 2),
             'interest' => fake()->word
         ];
     }

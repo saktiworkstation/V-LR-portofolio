@@ -9,6 +9,7 @@ use App\Http\Controllers\PDFController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\RatingController;
+use App\Http\Controllers\RoleManageController;
 use App\Http\Controllers\SkillController;
 use App\Models\Education;
 use App\Models\Experience;
@@ -125,6 +126,12 @@ Route::controller(RatingController::class)->group(function () {
         Route::post('/rating/store', 'store')->name('rating.store');
         Route::put('/rating/{id}/update', 'update');
         Route::delete('/rating/{id}/delete', 'destroy');
+    });
+});
+
+Route::controller(RoleManageController::class)->group(function () {
+    Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
+        Route::get('/role-manage', 'index')->name('role-manage');
     });
 });
 

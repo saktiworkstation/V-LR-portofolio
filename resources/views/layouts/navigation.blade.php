@@ -47,7 +47,7 @@
                             {{ __('Rating') }}
                         </x-nav-link>
 
-                        <x-nav-link :href="route('user-manage')" :active="request()->routeIs('user-manage')">
+                        <x-nav-link :href="route('role-manage')" :active="request()->routeIs('role-manage')">
                             {{ __('User Manage') }}
                         </x-nav-link>
                     @endrole
@@ -146,7 +146,7 @@
                 <x-responsive-nav-link :href="route('rating')" :active="request()->routeIs('rating')">
                     {{ __('Rating') }}
                 </x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('user-manage')" :active="request()->routeIs('user-manage')">
+                <x-responsive-nav-link :href="route('role-manage')" :active="request()->routeIs('role-manage')">
                     {{ __('User Manage') }}
                 </x-responsive-nav-link>
             @endrole

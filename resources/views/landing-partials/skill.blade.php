@@ -2,7 +2,7 @@
     <div class="max-w-xl mx-auto w-full">
 
         <!-- To achieve the desired progress, you can update the 'stroke-dasharray' property. -->
-        <h4 class="text-3xl md:text-5xl dark:text-black font-bold mb-6">Skills</h4>
+        <h4 class="text-3xl md:text-5xl dark:text-black font-bold mb-6 animate-bounce">Skills</h4>
 
         @foreach ($skils as $item)
             <div class="mb-7">
@@ -41,3 +41,23 @@
 
     </div>
 </div>
+
+  <style>
+    @keyframes bounce {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+            /* Bounce height */
+        }
+    }
+
+    .animate-bounce {
+        animation: bounce 1.2s ease-in-out infinite;
+        /* Animation settings */
+    }
+</style>

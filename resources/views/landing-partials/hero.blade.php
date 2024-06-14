@@ -1,5 +1,5 @@
 {{-- hero start --}}
-<div class="container mx-auto pt-20 pb-20">
+<div class="container mx-auto pt-20 pb-20" data-aos="fade-down-left">
     <div class="row max-w-[90%] mx-auto flex justify-center h-auto items-center">
         <div class="w-1/2 ps-40 pe-5 py-5">
             {{-- Content --}}

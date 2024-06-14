@@ -101,8 +101,11 @@
         <p class="mb-4 text-start">
           <a href="#!">Vue</a>
         </p>
-        <p class=" text-start">
+        <p class="mb-4 text-start">
           <a href="#!">Laravel</a>
+        </p>
+         <p class=" text-start">
+          <a href="#!">Next JS</a>
         </p>
       </div>
       <!-- Useful links section -->

@@ -15,7 +15,7 @@
         <div class="-mx-4 flex flex-wrap">
             <div class="w-full px-4">
                 <div class="mx-auto mb-[40px] max-w-[510px] text-center">
-                    <h2 class="text-dark mb-3 text-3xl leading-[1.208] font-bold sm:text-4xl md:text-[40px]">
+                    <h2 class="text-dark mb-3 text-3xl leading-[1.208] font-bold sm:text-4xl md:text-[40px] animate-bounce">
                         Recent Projects
                     </h2>
                     <p class="text-body-color text-base dark:text-dark-6">
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <div class="-mx-4 flex flex-wrap justify-center">
+        <div class="-mx-4 flex flex-wrap justify-center" data-aos="fade-down-left">
             <div class="w-full px-4">
                 <ul class="mb-12 flex flex-wrap justify-center space-x-1">
                     <li class="mb-1">
@@ -203,3 +203,26 @@
     </div>
 </section>
 <!-- ====== Portfolio Section End -->
+
+<style>
+    @keyframes bounce {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+            /* Bounce height */
+        }
+    }
+
+    .animate-bounce {
+        animation: bounce 1.2s ease-in-out infinite;
+        /* Animation settings */
+    }
+</style>
+
+
+<!-- ====== Portfolio style Section End -->

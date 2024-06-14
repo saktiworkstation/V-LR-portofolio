@@ -14,7 +14,7 @@ class ExperienceController extends Controller
     public function index()
     {
         return view('experience.index', [
-            'datas' => Experience::orderBy('order', 'asc')->get()
+            'datas' => Experience::where('user_id', Auth::user()->id)->orderBy('order', 'asc')->get()
         ]);
     }
 

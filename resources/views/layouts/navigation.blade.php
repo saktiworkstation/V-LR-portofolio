@@ -16,33 +16,37 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('experience')" :active="request()->routeIs('experience')">
-                        {{ __('Experience') }}
-                    </x-nav-link>
+                    @role('user')
+                        <x-nav-link :href="route('experience')" :active="request()->routeIs('experience')">
+                            {{ __('Experience') }}
+                        </x-nav-link>
 
-                    <x-nav-link :href="route('education')" :active="request()->routeIs('education')">
-                        {{ __('Education') }}
-                    </x-nav-link>
+                        <x-nav-link :href="route('education')" :active="request()->routeIs('education')">
+                            {{ __('Education') }}
+                        </x-nav-link>
 
-                    <x-nav-link :href="route('interest')" :active="request()->routeIs('interest')">
-                        {{ __('Interest') }}
-                    </x-nav-link>
+                        <x-nav-link :href="route('interest')" :active="request()->routeIs('interest')">
+                            {{ __('Interest') }}
+                        </x-nav-link>
 
-                    <x-nav-link :href="route('message')" :active="request()->routeIs('message')">
-                        {{ __('Message') }}
-                    </x-nav-link>
+                        <x-nav-link :href="route('skill')" :active="request()->routeIs('skill')">
+                            {{ __('Skill') }}
+                        </x-nav-link>
 
-                    <x-nav-link :href="route('skill')" :active="request()->routeIs('skill')">
-                        {{ __('Skill') }}
-                    </x-nav-link>
+                        <x-nav-link :href="route('project')" :active="request()->routeIs('project')">
+                            {{ __('Project') }}
+                        </x-nav-link>
+                    @endrole
 
-                    <x-nav-link :href="route('project')" :active="request()->routeIs('project')">
-                        {{ __('Project') }}
-                    </x-nav-link>
+                    @role('admin')
+                        <x-nav-link :href="route('message')" :active="request()->routeIs('message')">
+                            {{ __('Message') }}
+                        </x-nav-link>
 
-                    <x-nav-link :href="route('rating')" :active="request()->routeIs('rating')">
-                        {{ __('Rating') }}
-                    </x-nav-link>
+                        <x-nav-link :href="route('rating')" :active="request()->routeIs('rating')">
+                            {{ __('Rating') }}
+                        </x-nav-link>
+                    @endrole
                 </div>
             </div>
 
@@ -109,27 +113,31 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('experience')" :active="request()->routeIs('experience')">
-                {{ __('Experience') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('education')" :active="request()->routeIs('education')">
-                {{ __('Education') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('interest')" :active="request()->routeIs('interest')">
-                {{ __('Interest') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('message')" :active="request()->routeIs('message')">
-                {{ __('Message') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('skill')" :active="request()->routeIs('skill')">
-                {{ __('Skill') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('project')" :active="request()->routeIs('project')">
-                {{ __('Project') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('rating')" :active="request()->routeIs('rating')">
-                {{ __('Rating') }}
-            </x-responsive-nav-link>
+            @role('user')
+                <x-responsive-nav-link :href="route('experience')" :active="request()->routeIs('experience')">
+                    {{ __('Experience') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('education')" :active="request()->routeIs('education')">
+                    {{ __('Education') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('interest')" :active="request()->routeIs('interest')">
+                    {{ __('Interest') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('skill')" :active="request()->routeIs('skill')">
+                    {{ __('Skill') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('project')" :active="request()->routeIs('project')">
+                    {{ __('Project') }}
+                </x-responsive-nav-link>
+            @endrole
+            @role('admin')
+                <x-responsive-nav-link :href="route('message')" :active="request()->routeIs('message')">
+                    {{ __('Message') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('rating')" :active="request()->routeIs('rating')">
+                    {{ __('Rating') }}
+                </x-responsive-nav-link>
+            @endrole
         </div>
 
         <!-- Responsive Settings Options -->

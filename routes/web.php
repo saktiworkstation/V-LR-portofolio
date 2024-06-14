@@ -58,67 +58,67 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::controller(ExperienceController::class)->group(function () {
-        Route::get('/experience', 'index')->name('experience');
-        Route::get('/experience/create', 'create')->name('experience.create');
-        Route::post('/experience/store', 'store')->name('experience.store');
-        Route::get('/experience/{id}/edit', 'edit');
-        Route::put('/experience/{id}/update', 'update');
+        Route::get('/experience', 'index')->name('experience')->middleware('role:user');
+        Route::get('/experience/create', 'create')->name('experience.create')->middleware('role:user');
+        Route::post('/experience/store', 'store')->name('experience.store')->middleware('role:user');
+        Route::get('/experience/{id}/edit', 'edit')->middleware('role:user');
+        Route::put('/experience/{id}/update', 'update')->middleware('role:user');
         Route::delete('/experience/{id}/delete', 'destroy');
     });
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::controller(EducationController::class)->group(function () {
-        Route::get('/education', 'index')->name('education');
-        Route::get('/education/create', 'create')->name('education.create');
-        Route::post('/education/store', 'store')->name('education.store');
-        Route::get('/education/{id}/edit', 'edit');
-        Route::put('/education/{id}/update', 'update');
+        Route::get('/education', 'index')->name('education')->middleware('role:user');
+        Route::get('/education/create', 'create')->name('education.create')->middleware('role:user');
+        Route::post('/education/store', 'store')->name('education.store')->middleware('role:user');
+        Route::get('/education/{id}/edit', 'edit')->middleware('role:user');
+        Route::put('/education/{id}/update', 'update')->middleware('role:user');
         Route::delete('/education/{id}/delete', 'destroy');
     });
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::controller(InterestController::class)->group(function () {
-        Route::get('/interest', 'index')->name('interest');
-        Route::get('/interest/create', 'create')->name('interest.create');
-        Route::post('/interest/store', 'store')->name('interest.store');
-        Route::get('/interest/{id}/edit', 'edit');
-        Route::put('/interest/{id}/update', 'update');
+        Route::get('/interest', 'index')->name('interest')->middleware('role:user');
+        Route::get('/interest/create', 'create')->name('interest.create')->middleware('role:user');
+        Route::post('/interest/store', 'store')->name('interest.store')->middleware('role:user');
+        Route::get('/interest/{id}/edit', 'edit')->middleware('role:user');
+        Route::put('/interest/{id}/update', 'update')->middleware('role:user');
         Route::delete('/interest/{id}/delete', 'destroy');
     });
 });
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/message', [MessageController::class, 'index'])->name('message');
     Route::delete('/message/{id}/delete', [MessageController::class, 'destroy']);
 });
-Route::get('/message/create', [MessageController::class, 'create'])->name('message.create');
-Route::post('/message/store', [MessageController::class, 'store'])->name('message.store');
+Route::get('/message/create', [MessageController::class, 'create'])->name('message.create')->middleware('role:user');
+Route::post('/message/store', [MessageController::class, 'store'])->name('message.store')->middleware('role:user');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::controller(SkillController::class)->group(function () {
-        Route::get('/skill', 'index')->name('skill');
-        Route::get('/skill/create', 'create')->name('skill.create');
-        Route::post('/skill/store', 'store')->name('skill.store');
-        Route::get('/skill/{id}/edit', 'edit');
-        Route::put('/skill/{id}/update', 'update');
+        Route::get('/skill', 'index')->name('skill')->middleware('role:user');
+        Route::get('/skill/create', 'create')->name('skill.create')->middleware('role:user');
+        Route::post('/skill/store', 'store')->name('skill.store')->middleware('role:user');
+        Route::get('/skill/{id}/edit', 'edit')->middleware('role:user');
+        Route::put('/skill/{id}/update', 'update')->middleware('role:user');
         Route::delete('/skill/{id}/delete', 'destroy');
     });
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::controller(ProjectController::class)->group(function () {
-        Route::get('/project', 'index')->name('project');
-        Route::get('/project/create', 'create')->name('project.create');
-        Route::post('/project/store', 'store')->name('project.store');
-        Route::get('/project/{id}/edit', 'edit');
-        Route::put('/project/{id}/update', 'update');
+        Route::get('/project', 'index')->name('project')->middleware('role:user');
+        Route::get('/project/create', 'create')->name('project.create')->middleware('role:user');
+        Route::post('/project/store', 'store')->name('project.store')->middleware('role:user');
+        Route::get('/project/{id}/edit', 'edit')->middleware('role:user');
+        Route::put('/project/{id}/update', 'update')->middleware('role:user');
         Route::delete('/project/{id}/delete', 'destroy');
     });
 });
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth', 'verified', 'role:user'])->group(function () {
     Route::controller(RatingController::class)->group(function () {
         Route::get('/rating', 'index')->name('rating');
         Route::get('/rating/user', 'user')->name('rating.user');

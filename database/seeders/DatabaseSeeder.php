@@ -4,14 +4,17 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Education;
-use App\Models\Experience;
-use App\Models\Interest;
+use App\Models\User;
+use App\Models\Skill;
+use App\Models\Rating;
 use App\Models\Message;
 use App\Models\Project;
-use App\Models\Rating;
-use App\Models\Skill;
+use App\Models\Interest;
+use App\Models\Education;
+use App\Models\Experience;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class DatabaseSeeder extends Seeder
 {
@@ -34,5 +37,37 @@ class DatabaseSeeder extends Seeder
         Skill::factory(10)->create();
         Project::factory(10)->create();
         Rating::factory(1)->create();
+
+        Role::create(['name' => 'admin']);
+        Role::create(['name' => 'user']);
+
+        Permission::create(['name' => 'cv manage']);
+        Permission::create(['name' => 'user manage']);
+        Permission::create(['name' => 'message']);
+
+        $roleAdmin = Role::findByName('admin');
+        $roleAdmin->givePermissionTo('user manage');
+        $roleAdmin->givePermissionTo('message');
+
+        $roleUser = Role::findByName('user');
+        $roleUser->givePermissionTo('cv manage');
+
+        $user = User::create([
+            'name' => 'Sakti',
+            'username' => 'sakti',
+            'email' => 'sakti@gmail.com',
+            'password' => bcrypt('password'),
+            'email_verified_at' => now()
+        ]);
+        $user->assignRole('user');
+
+        $admin = User::create([
+            'name' => 'Admin',
+            'username' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('password'),
+            'email_verified_at' => now()
+        ]);
+        $admin->assignRole('admin');
     }
 }

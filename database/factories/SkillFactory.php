@@ -17,6 +17,7 @@ class SkillFactory extends Factory
     public function definition(): array
     {
         return [
+            'user_id' => mt_rand(1, 2),
             'name' => $this->faker->word,
             'description' => $this->faker->sentence,
             'skill_level' => $this->faker->randomElement(['Beginner', 'Intermediate', 'Advanced', 'Expert']),

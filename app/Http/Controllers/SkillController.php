@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Skill;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SkillController extends Controller
 {
@@ -35,6 +36,8 @@ class SkillController extends Controller
             'description' => 'nullable|string',
             'skill_level' => 'required|in:Beginner,Intermediate,Advanced,Expert',
         ]);
+
+        $validatedData['user_id'] = Auth::user()->id;
 
         Skill::create($validatedData);
 

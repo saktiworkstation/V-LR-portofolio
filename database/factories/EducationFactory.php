@@ -20,6 +20,7 @@ class EducationFactory extends Factory
         $endDate = fake()->date('d-m-Y', '+1 year');
 
         return [
+            'user_id' => mt_rand(1, 2),
             'degree' => fake()->company,
             'field_of_study' => fake()->company,
             'education_name' => fake()->company,

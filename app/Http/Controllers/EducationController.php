@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Education;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EducationController extends Controller
 {
@@ -65,6 +66,8 @@ class EducationController extends Controller
                 'education_name' => 'required|max:100',
                 'graduation_year' => 'required|max:50',
             ];
+
+            $validatedData['user_id'] = Auth::user()->id;
 
             $validatedData = $request->validate($rules);
 

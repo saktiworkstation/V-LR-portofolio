@@ -118,9 +118,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
 });
 
-Route::middleware(['auth', 'verified', 'role:user'])->group(function () {
-    Route::controller(RatingController::class)->group(function () {
-        Route::get('/rating', 'index')->name('rating');
+Route::controller(RatingController::class)->group(function () {
+    Route::get('/rating', 'index')->name('rating')->middleware('role:admin');
+    Route::middleware(['auth', 'verified', 'role:user'])->group(function () {
         Route::get('/rating/user', 'user')->name('rating.user');
         Route::post('/rating/store', 'store')->name('rating.store');
         Route::put('/rating/{id}/update', 'update');

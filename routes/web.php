@@ -132,6 +132,7 @@ Route::controller(RatingController::class)->group(function () {
 Route::controller(RoleManageController::class)->group(function () {
     Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
         Route::get('/role-manage', 'index')->name('role-manage');
+        Route::get('/role-manage/create', 'create')->name('role-manage.create');
     });
 });
 

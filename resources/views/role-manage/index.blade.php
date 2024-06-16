@@ -29,8 +29,12 @@
                         <tbody class="bg-gray-500">
                             @foreach ($datas as $data)
                                 <tr class="text-white">
-                                    <td class="px-6 py-2 border border-slate-700">Role data</td>
-                                    <td class="px-6 py-2 border border-slate-700">User data</td>
+                                    <td class="px-6 py-2 border border-slate-700">{{ $user->name }}</td>
+                                    <td class="px-6 py-2 border border-slate-700">
+                                        @foreach ($user->roles as $role)
+                                            {{ $role->name }}
+                                        @endforeach
+                                    </td>
                                     <td class="px-6 py-2 border border-slate-700">
                                         <a href="/role-manage/{{ $data->id }}/edit" class="">
                                             Edit</span>

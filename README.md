@@ -61,6 +61,14 @@ Welcome to my personal portfolio template! Below you'll find a brief overview of
    - Status: Completed  
    Explore skill set and expertise.
 
+7. **Rating:**  
+   - Status: Completed  
+   This website's testimonials from users.
+
+8. **User Role Manage:**  
+   - Status: On Going  
+   Managing user data and roles on users.
+
 ### About Me:
 
 I am passionate about leveraging technology to create meaningful experiences and solve complex problems. Through this portfolio, I aim to share my journey, skills, and projects with the world. Stay tuned for updates as I continue to refine and expand this platform.

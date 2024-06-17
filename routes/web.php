@@ -1,23 +1,24 @@
 <?php
 
-use App\Http\Controllers\CekController;
-use App\Http\Controllers\EducationController;
-use App\Http\Controllers\ExperienceController;
-use App\Http\Controllers\InterestController;
-use App\Http\Controllers\MessageController;
-use App\Http\Controllers\PDFController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\RatingController;
-use App\Http\Controllers\RoleManageController;
-use App\Http\Controllers\SkillController;
+use App\Models\User;
+use App\Models\Skill;
+use App\Models\Rating;
+use App\Models\Project;
+use App\Models\Interest;
 use App\Models\Education;
 use App\Models\Experience;
-use App\Models\Interest;
-use App\Models\Project;
-use App\Models\Rating;
-use App\Models\Skill;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CekController;
+use App\Http\Controllers\PDFController;
+use App\Http\Controllers\SkillController;
+use App\Http\Controllers\RatingController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\InterestController;
+use App\Http\Controllers\EducationController;
+use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\RoleManageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,9 @@ Route::get('/pdf/show/cv', [PDFController::class, 'showCV'])->name('showcv');
 Route::get('/pdf/download/cv', [PDFController::class, 'downloadCV'])->name('downloadcv');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard', [
+        'users' => User::with('roles')->get(),
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 

@@ -6,19 +6,25 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
+            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+                <div class="max-w-xl">
+                    <div class="p-6 text-gray-900">
+                        {{ __("You're logged in!") }}
+                    </div>
                 </div>
             </div>
 
-            <div class="p-4 bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
+            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+                <div class="max-w-4xl">
+                    <h4 class="pb-3 font-semibold text-xl text-gray-800 leading-tight">
+                        {{ __('role-manage Data') }}
+                    </h4>
                     <div
                         class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex items-center justify-between mb-4">
-                            <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest Customers
+                            <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Latest
+                                Customers
                             </h5>
                             <a href="#"
                                 class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">

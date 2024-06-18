@@ -19,23 +19,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 </head>
 
-<body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100">
+<body class="font-sans antialiased bg-slate-800 ">
+    <div class="min-h-screen relative">
         @include('layouts.landing-navigation')
 
         @include('landing-partials.hero')
 
-        @include('landing-partials.experience')
-
-        @include('landing-partials.project')
-
-        @include('landing-partials.education')
-
-        @include('landing-partials.skill')
-
-        @include('landing-partials.interest')
+        @include('landing-partials.feature')
 
         @include('landing-partials.rating')
+        
+        @include('landing-partials.faq')
+
     </div>
 
     @include('landing-partials.footer')

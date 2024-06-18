@@ -1,73 +1,37 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
-                </div>
-
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('/')" :active="request()->routeIs('/')">
-                        {{ __('Home') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('experience')" :active="request()->routeIs('experience')">
-                        {{ __('Experience') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('message.create')" :active="request()->routeIs('message.create')">
-                        {{ __('Contact Me') }}
-                    </x-nav-link>
-                </div>
-            </div>
-
-            <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ms-6 mx-5">
-                <div class="sm:fixed sm:top-0 sm:right-0 p-4 text-right z-10">
-                    <x-link-primary-button :url="url('/pdf/show/cv')" target="_blank">
-                        {{ __('CV') }}
-                    </x-link-primary-button>
-
-                    @if (Route::has('login'))
-                        @auth
-                            <x-link-primary-button :url="route('dashboard')">{{ __('Dashboard') }}</x-link-primary-button>
-                        @else
-                            <x-link-primary-button :url="route('login')">{{ __('Login') }}</x-link-primary-button>
-                            @if (Route::has('register'))
-                                <x-link-primary-button :url="route('register')">{{ __('Register') }}</x-link-primary-button>
-                            @endif
-                        @endauth
-                    @endif
-                </div>
-            </div>
-
-            <!-- Hamburger -->
-            <div class="-me-2 flex items-center sm:hidden">
-                <button @click="open = ! open"
-                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{ 'hidden': open, 'inline-flex': !open }" class="inline-flex"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{ 'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
+<header>
+<nav x-data="{ open: false }" class="w-9/12 h-[80px] rounded-xl mt-6 mx-auto bg-neutral-50 border-b border-gray-100 flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+            <img class="h-auto w-16" src="/img/logo.png" alt="V-LR Portfolio logo">
+        </a>
+        <span class="my-auto text-xl font-semibold">V-LR.</span>
         </div>
-    </div>
-
-    <!-- Responsive Navigation Menu -->
-    <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('/')" :active="request()->routeIs('/')">
-                {{ __('Home') }}
-            </x-responsive-nav-link>
+        <div class="flex lg:hidden">
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
         </div>
-    </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#hero" class="text-lg font-medium leading-6 text-gray-900 hover:text-blue-800">Home</a>
+        <a href="#feature" class="text-lg font-medium leading-6 text-gray-900 hover:text-blue-800">Features</a>
+        <a href="#testimoni" class="text-lg font-medium leading-6 text-gray-900 hover:text-blue-800">Review</a>
+        <a href="#contact" class="text-lg font-medium leading-6 text-gray-900 hover:text-blue-800">Contact</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-3">
+                @if (Route::has('login'))
+                    @auth
+                        <x-link-primary-button :url="route('dashboard')">{{ __('Dashboard') }}</x-link-primary-button>
+                    @else
+                        <x-link-primary-button :url="route('login')">{{ __('Login') }}</x-link-primary-button>
+                        @if (Route::has('register'))
+                            <x-link-primary-button :url="route('register')">{{ __('Register') }}</x-link-primary-button>
+                        @endif
+                    @endauth
+                @endif
+        </div>
 </nav>
+    
+</header>

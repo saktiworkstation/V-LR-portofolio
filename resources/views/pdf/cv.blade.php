@@ -17,11 +17,20 @@
         testing tampilin data
     </h1>
 
-    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Data Skills</h2>
-    <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-        @foreach ($skills as $skill)
+    <h2 class="mb-2 text-lg font-semibold text-gray-900">Skills Data </h2>
+    <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside">
+        @foreach ($skills as $data)
             <li>
-                {{ $skill->name }}
+                {{ $data->name }}
+            </li>
+        @endforeach
+    </ul>
+
+    <h2 class="mb-2 text-lg font-semibold text-gray-900">Project Data</h2>
+    <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside">
+        @foreach ($projects as $data)
+            <li>
+                {{ $data->name }}
             </li>
         @endforeach
     </ul>

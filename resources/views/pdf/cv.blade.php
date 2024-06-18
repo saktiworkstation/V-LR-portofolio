@@ -1,26 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CV_Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{-- Tailwind --}}
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    {{-- Flowbite --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 bg-black text-white">
-                <h1>User Name</h1>
-                <a href="/pdf/download/cv">Download CV here</a>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+    <h1 class="text-3xl font-bold underline">
+        testing tampilin data
+    </h1>
+
+    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Data Skills</h2>
+    <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+        <li>
+            At least 10 characters (and up to 100 characters)
+        </li>
+        <li>
+            At least one lowercase character
+        </li>
+        <li>
+            Inclusion of at least one special character, e.g., ! @ # ?
+        </li>
+    </ul>
+
+    {{-- Flowbite --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 
 </html>

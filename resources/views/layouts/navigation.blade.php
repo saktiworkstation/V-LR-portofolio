@@ -81,7 +81,7 @@
                             <x-dropdown-link :href="route('rating.user')">
                                 {{ __('My Rating') }}
                             </x-dropdown-link>
-                            <x-dropdown-link :href="route('showcv')">
+                            <x-dropdown-link :href="url('/pdf/show/cv/' . Auth::user()->id)">
                                 {{ __('My CV Look') }}
                             </x-dropdown-link>
                         @endrole
@@ -167,7 +167,7 @@
                     <x-responsive-nav-link :href="route('rating.user')">
                         {{ __('My Rating') }}
                     </x-responsive-nav-link>
-                    <x-responsive-nav-link :href="route('showcv')">
+                    <x-responsive-nav-link :href="url('/pdf/show/cv/' . Auth::user()->id)">
                         {{ __('My CV Look') }}
                     </x-responsive-nav-link>
                 @endrole

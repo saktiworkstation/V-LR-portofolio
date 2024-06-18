@@ -12,23 +12,23 @@ use Barryvdh\DomPDF\Facade\Pdf as FacadePdf;
 
 class PDFController extends Controller
 {
-    public function showCV(){
+    public function showCV($id){
         return view('pdf.cv', [
-            'skills' => Skill::latest()->get(),
-            'projects' => Project::latest()->get(),
-            'educations' => Education::latest()->get(),
-            'intereses' => Interest::latest()->get(),
-            'experineces' => Experience::latest()->get(),
+            'skills' => Skill::where('user_id', $id)->latest()->get(),
+            'projects' => Project::where('user_id', $id)->latest()->get(),
+            'educations' => Education::where('user_id', $id)->latest()->get(),
+            'intereses' => Interest::where('user_id', $id)->latest()->get(),
+            'experineces' => Experience::where('user_id', $id)->latest()->get(),
         ]);
     }
 
-    public function downloadCV(){
+    public function downloadCV($id){
         $pdf = FacadePdf::loadView('pdf.cv', [
-            'skills' => Skill::latest()->get(),
-            'projects' => Project::latest()->get(),
-            'educations' => Education::latest()->get(),
-            'intereses' => Interest::latest()->get(),
-            'experineces' => Experience::latest()->get(),
+            'skills' => Skill::where('user_id', $id)->latest()->get(),
+            'projects' => Project::where('user_id', $id)->latest()->get(),
+            'educations' => Education::where('user_id', $id)->latest()->get(),
+            'intereses' => Interest::where('user_id', $id)->latest()->get(),
+            'experineces' => Experience::where('user_id', $id)->latest()->get(),
         ]);
         return $pdf->download('pdf_file.pdf');
     }

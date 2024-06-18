@@ -42,8 +42,8 @@ Route::get('/', function () {
     ]);
 })->name('/');
 
-Route::get('/pdf/show/cv', [PDFController::class, 'showCV'])->name('showcv');
-Route::get('/pdf/download/cv', [PDFController::class, 'downloadCV'])->name('downloadcv');
+Route::get('/pdf/show/cv/{id}', [PDFController::class, 'showCV'])->name('showcv');
+Route::get('/pdf/download/cv/{id}', [PDFController::class, 'downloadCV'])->name('downloadcv');
 
 Route::get('/dashboard', function () {
     return view('dashboard', [

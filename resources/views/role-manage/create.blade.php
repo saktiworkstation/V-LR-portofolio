@@ -38,7 +38,7 @@
                             <div>
                                 <x-input-label for="role_id" :value="__('Role')" />
                                 <x-select-input id="role_id" name="role_id" required>
-                                    <option value="">Choose User</option>
+                                    <option value="">Choose Role</option>
                                     @foreach ($roles as $data)
                                         <option value="{{ $data->id }}"
                                             {{ old('role_id') == $data->id ? 'selected' : '' }}>

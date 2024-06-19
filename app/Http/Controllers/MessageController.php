@@ -38,7 +38,7 @@ class MessageController extends Controller
 
         Message::create($validatedData);
 
-        return redirect('message')->with('success', 'New message has been added!');
+        return redirect('dashboard')->with('success', 'New message has been added!');
     }
 
     /**

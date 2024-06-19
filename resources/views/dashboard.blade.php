@@ -12,6 +12,11 @@
                     <div class="p-2 text-gray-900 font-medium">
                         {{ __("You're logged in!") }}
                     </div>
+                    @if (session()->has('success'))
+                        <x-success-alert>
+                            {{ session('success') }}
+                        </x-success-alert>
+                    @endif
                 </div>
             </div>
 

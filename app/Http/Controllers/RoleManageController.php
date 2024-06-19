@@ -36,4 +36,12 @@ class RoleManageController extends Controller
 
         return redirect('role-manag')->with('success', 'Role assigned successfully!');
     }
+
+    public function removeUserRole(Request $request)
+    {
+        $user = User::findOrFail($request->user_id);
+        $user->removeRole($request->role);
+
+        return redirect('role-manag')->with('success', 'Role removed successfully!');
+    }
 }

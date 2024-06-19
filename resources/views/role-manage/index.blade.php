@@ -31,11 +31,10 @@
                                     <td class="px-6 py-2 border border-slate-700">{{ $data->name }}</td>
                                     <td class="px-6 py-2 border border-slate-700">
                                         @foreach ($data->roles as $role)
-                                            <form action="/role-manage/delete" method="post" class="d-inline">
+                                            <form action="/role-manage/{{ $data->id }}/delete/{{ $role->name }}"
+                                                method="post" class="d-inline">
                                                 @method('delete')
                                                 @csrf
-                                                <input type="hidden" name="user_id">
-                                                <input type="hidden" name="role_name">
                                                 <button
                                                     class="inline-flex items-center px-3 py-1 bg-gray-800 border border-transparent rounded-md font-medium text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
                                                     onclick="return confirm('Are you sure want to delete {{ $role->name }}?')">{{ $role->name }}</span>

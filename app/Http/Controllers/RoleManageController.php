@@ -20,4 +20,20 @@ class RoleManageController extends Controller
             'roles' => Role::latest()->get(),
         ]);
     }
+
+    public function store(Request $request){
+        // dd($request->all());
+
+        $validatedData = $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'role_id' => 'required|exists:roles,id',
+        ]);
+
+        $user = User::findOrFail($validatedData['user_id']);
+        $role = Role::findOrFail($validatedData['role_id']);
+
+        $user->assignRole($role->name);
+
+        return redirect('role-manag')->with('success', 'Role assigned successfully!');
+    }
 }

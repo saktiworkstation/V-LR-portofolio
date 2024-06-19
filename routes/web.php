@@ -136,7 +136,7 @@ Route::controller(RoleManageController::class)->group(function () {
     Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
         Route::get('/role-manage', 'index')->name('role-manage');
         Route::get('/role-manage/create', 'create')->name('role-manage.create');
-        Route::get('/role-manage/store', 'store')->name('role-manage.store');
+        Route::post('/role-manage/store', 'store')->name('role-manage.store');
     });
 });
 

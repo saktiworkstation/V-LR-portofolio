@@ -12,7 +12,12 @@
                     <h4 class="pb-3 font-semibold text-xl text-gray-800 leading-tight">
                         {{ __('Rating Data') }}
                     </h4>
-                    <table class="border-collapse border-slate-500">
+                    @if (session()->has('success'))
+                        <x-success-alert>
+                            {{ session('success') }}
+                        </x-success-alert>
+                    @endif
+                    <table class="border-collapse border-slate-500 mt-3">
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="px-6 py-2 border border-slate-600">User</th>

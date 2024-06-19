@@ -11,6 +11,11 @@
                 <div class="max-w-xl">
                     <x-link-primary-button :url="route('role-manage.create')">{{ __('Assign Role to USer') }}</x-link-primary-button>
                 </div>
+                @if (session()->has('success'))
+                    <x-success-alert>
+                        {{ session('success') }}
+                    </x-success-alert>
+                @endif
             </div>
 
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">

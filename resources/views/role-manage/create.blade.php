@@ -36,7 +36,7 @@
                                 <x-input-error class="mt-2" :messages="$errors->get('user_id')" />
                             </div>
                             <div>
-                                <x-input-label for="role_id" :value="__('User')" />
+                                <x-input-label for="role_id" :value="__('Role')" />
                                 <x-select-input id="role_id" name="role_id" required>
                                     <option value="">Choose User</option>
                                     @foreach ($roles as $data)

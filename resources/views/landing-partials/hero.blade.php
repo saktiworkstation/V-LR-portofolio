@@ -1,5 +1,5 @@
 {{-- hero start --}}
-<div class="mx-auto pt-20 pb-72 bg-slate-800" data-aos="fade-down-left" id="hero">
+<div class="mx-auto py-52 bg-slate-800" data-aos="fade-down-left" id="hero">
     <div class="row max-w-[90%] mx-auto flex justify-center h-auto items-center">
         <div class="w-1/2 ps-40 pe-5 py-5">
             {{-- Content --}}

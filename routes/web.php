@@ -137,6 +137,7 @@ Route::controller(RoleManageController::class)->group(function () {
         Route::get('/role-manage', 'index')->name('role-manage');
         Route::get('/role-manage/create', 'create')->name('role-manage.create');
         Route::post('/role-manage/store', 'store')->name('role-manage.store');
+        Route::delete('/role-manage/delete', 'removeUserRole');
     });
 });
 

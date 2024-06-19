@@ -48,7 +48,7 @@
                                     <option value="Expert" {{ old('skill_level') == 'Expert' ? 'selected' : '' }}>Expert
                                     </option>
                                 </x-select-input>
-                                <x-input-error class="mt-2" :messages="$errors->get('description')" />
+                                <x-input-error class="mt-2" :messages="$errors->get('skill_level')" />
                             </div>
 
                             <div class="flex items-center gap-4">

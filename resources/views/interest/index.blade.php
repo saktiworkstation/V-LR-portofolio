@@ -11,6 +11,11 @@
                 <div class="max-w-xl">
                     <x-link-primary-button :url="route('interest.create')">{{ __('Add New Interest') }}</x-link-primary-button>
                 </div>
+                @if (session()->has('success'))
+                    <x-success-alert>
+                        {{ session('success') }}
+                    </x-success-alert>
+                @endif
             </div>
 
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">

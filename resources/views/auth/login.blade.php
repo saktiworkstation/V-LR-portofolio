@@ -5,9 +5,9 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
-        <!-- Email Address $ Username -->
+        <!-- Email Address  -->
         <div>
-            <x-input-label for="id_user" :value="__('Email or Username')" />
+            <x-input-label for="id_user" :value="__('Email')" />
             <x-text-input id="id_user" class="block mt-1 w-full" type="text" name="id_user" :value="old('id_user')" required
                 autofocus autocomplete="id_user" />
             <x-input-error :messages="$errors->get('id_user')" class="mt-2" />

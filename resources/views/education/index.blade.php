@@ -34,28 +34,34 @@
                             </tr>
                         </thead>
                         <tbody class="bg-gray-500">
-                            @foreach ($educations as $data)
-                                <tr class="text-white">
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->degree }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->field_of_study }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->education_name }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->graduation_year }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">
-                                        <a href="/education/{{ $data->id }}/edit" class="">
-                                            Edit</span>
-                                        </a>
-                                        <form action="/education/{{ $data->id }}/delete" method="post"
-                                            class="d-inline">
-                                            @method('delete')
-                                            @csrf
-                                            <button class=""
-                                                onclick="return confirm('Are you sure want to delete {{ $data->company }}?')">
-                                                Hapus</span>
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            @endforeach
+                            @if ($datas->count() > 0)
+                                @foreach ($educations as $data)
+                                    <tr class="text-white">
+                                        <td class="px-6 py-2 border border-slate-700">{{ $data->degree }}</td>
+                                        <td class="px-6 py-2 border border-slate-700">{{ $data->field_of_study }}</td>
+                                        <td class="px-6 py-2 border border-slate-700">{{ $data->education_name }}</td>
+                                        <td class="px-6 py-2 border border-slate-700">{{ $data->graduation_year }}</td>
+                                        <td class="px-6 py-2 border border-slate-700">
+                                            <a href="/education/{{ $data->id }}/edit" class="">
+                                                Edit</span>
+                                            </a>
+                                            <form action="/education/{{ $data->id }}/delete" method="post"
+                                                class="d-inline">
+                                                @method('delete')
+                                                @csrf
+                                                <button class=""
+                                                    onclick="return confirm('Are you sure want to delete {{ $data->company }}?')">
+                                                    Hapus</span>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @else
+                                <h4 class="pb-3 font-semibold text-base text-red-500 leading-tight">
+                                    {{ __('You dont have a Education yet.') }}
+                                </h4>
+                            @endif
                         </tbody>
                     </table>
                 </div>

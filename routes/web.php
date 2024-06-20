@@ -18,6 +18,7 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\InterestController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\RoleManageController;
 
 /*
@@ -138,6 +139,12 @@ Route::controller(RoleManageController::class)->group(function () {
         Route::get('/role-manage/create', 'create')->name('role-manage.create');
         Route::post('/role-manage/store', 'store')->name('role-manage.store');
         Route::delete('/role-manage/{user_id}/delete/{role_name}', 'removeUserRole');
+    });
+});
+
+Route::controller(ReportController::class)->group(function () {
+    Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
+        Route::get('/report', 'index')->name('report');
     });
 });
 

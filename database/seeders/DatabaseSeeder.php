@@ -30,12 +30,12 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Experience::factory(10)->create();
-        Education::factory(10)->create();
-        Interest::factory(10)->create();
-        Message::factory(10)->create();
-        Skill::factory(10)->create();
-        Project::factory(10)->create();
+        Experience::factory(5)->create();
+        Education::factory(5)->create();
+        Interest::factory(5)->create();
+        Message::factory(5)->create();
+        Skill::factory(5)->create();
+        Project::factory(5)->create();
         Rating::factory(1)->create();
 
         Role::create(['name' => 'admin']);

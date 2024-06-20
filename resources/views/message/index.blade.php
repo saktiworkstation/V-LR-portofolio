@@ -22,24 +22,30 @@
                             </tr>
                         </thead>
                         <tbody class="bg-gray-500">
-                            @foreach ($datas as $data)
-                                <tr class="text-white">
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->name }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->email }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->message }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">
-                                        <form action="/message/{{ $data->id }}/delete" method="post"
-                                            class="d-inline">
-                                            @method('delete')
-                                            @csrf
-                                            <button class=""
-                                                onclick="return confirm('Are you sure want to delete message from {{ $data->name }}?')">
-                                                Delete</span>
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            @endforeach
+                            @if ($datas->count() > 0)
+                                @foreach ($datas as $data)
+                                    <tr class="text-white">
+                                        <td class="px-6 py-2 border border-slate-700">{{ $data->name }}</td>
+                                        <td class="px-6 py-2 border border-slate-700">{{ $data->email }}</td>
+                                        <td class="px-6 py-2 border border-slate-700">{{ $data->message }}</td>
+                                        <td class="px-6 py-2 border border-slate-700">
+                                            <form action="/message/{{ $data->id }}/delete" method="post"
+                                                class="d-inline">
+                                                @method('delete')
+                                                @csrf
+                                                <button class=""
+                                                    onclick="return confirm('Are you sure want to delete message from {{ $data->name }}?')">
+                                                    Delete</span>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @else
+                                <h4 class="pb-3 font-semibold text-base text-red-500 leading-tight">
+                                    {{ __('No Messages Yet.') }}
+                                </h4>
+                            @endif
                         </tbody>
                     </table>
                 </div>

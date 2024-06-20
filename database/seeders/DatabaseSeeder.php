@@ -54,7 +54,6 @@ class DatabaseSeeder extends Seeder
 
         $user = User::create([
             'name' => 'User',
-            'username' => 'user',
             'email' => 'user@gmail.com',
             'password' => bcrypt('password'),
             'email_verified_at' => now()
@@ -63,7 +62,6 @@ class DatabaseSeeder extends Seeder
 
         $user = User::create([
             'name' => 'User2',
-            'username' => 'user2',
             'email' => 'use2r@gmail.com',
             'password' => bcrypt('password'),
             'email_verified_at' => now()
@@ -72,7 +70,6 @@ class DatabaseSeeder extends Seeder
 
         $admin = User::create([
             'name' => 'Admin',
-            'username' => 'admin',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('password'),
             'email_verified_at' => now()

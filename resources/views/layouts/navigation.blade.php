@@ -50,6 +50,10 @@
                         <x-nav-link :href="route('role-manage')" :active="request()->routeIs('role-manage')">
                             {{ __('User Manage') }}
                         </x-nav-link>
+
+                        <x-nav-link :href="route('report')" :active="request()->routeIs('report')">
+                            {{ __('Report') }}
+                        </x-nav-link>
                     @endrole
                 </div>
             </div>
@@ -148,6 +152,9 @@
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('role-manage')" :active="request()->routeIs('role-manage')">
                     {{ __('User Manage') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('report')" :active="request()->routeIs('report')">
+                    {{ __('Report') }}
                 </x-responsive-nav-link>
             @endrole
         </div>

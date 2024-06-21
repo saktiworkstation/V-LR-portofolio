@@ -35,18 +35,16 @@
                                         <td class="px-6 py-2 border border-slate-700">{{ $data->star }}</td>
                                         <td class="px-6 py-2 border border-slate-700">
                                             @if (Auth::user()->id == $data->user_id)
-                                                <a href="/rating/{{ $data->id }}/edit" class="">
-                                                    Edit</span>
-                                                </a>
+                                                <x-link-small-button :url="url('/rating/' . $data->id . '/edit')">
+                                                    {{ __('Edit') }}
+                                                </x-link-small-button>
                                                 <form action="/rating/{{ $data->id }}/delete" method="post"
                                                     class="d-inline">
                                                     @method('delete')
                                                     @csrf
-                                                    <button
-                                                        class="inline-flex items-center px-3 py-1 bg-gray-800 border border-transparent rounded-md font-medium text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
-                                                        onclick="return confirm('Are you sure want to delete {{ $data->company }}?')">
-                                                        Hapus</span>
-                                                    </button>
+                                                    <x-delete-button :message="$data->user_id">
+                                                        Delete
+                                                    </x-delete-button>
                                                 </form>
                                             @else
                                                 <span class="pb-3 font-semibold text-base text-red-500 leading-tight">

@@ -36,35 +36,40 @@
                                     class="bg-orange-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
                                     <dt
                                         class="w-8 h-8 rounded-full bg-orange-100 dark:bg-gray-500 text-orange-600 dark:text-orange-300 text-sm font-medium flex items-center justify-center mb-1">
-                                        12</dt>
+                                        {{ $skills->count() }}
+                                    </dt>
                                     <dd class="text-orange-600 dark:text-orange-300 text-sm font-medium">Skill</dd>
                                 </dl>
                                 <dl
                                     class="bg-teal-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
                                     <dt
                                         class="w-8 h-8 rounded-full bg-teal-100 dark:bg-gray-500 text-teal-600 dark:text-teal-300 text-sm font-medium flex items-center justify-center mb-1">
-                                        23</dt>
+                                        {{ $projects->count() }}
+                                    </dt>
                                     <dd class="text-teal-600 dark:text-teal-300 text-sm font-medium">Project</dd>
                                 </dl>
                                 <dl
                                     class="bg-blue-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
                                     <dt
                                         class="w-8 h-8 rounded-full bg-blue-100 dark:bg-gray-500 text-blue-600 dark:text-blue-300 text-sm font-medium flex items-center justify-center mb-1">
-                                        64</dt>
+                                        {{ $projects->count() }}
+                                    </dt>
                                     <dd class="text-blue-600 dark:text-blue-300 text-sm font-medium">Education</dd>
                                 </dl>
                                 <dl
                                     class="bg-blue-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
                                     <dt
                                         class="w-8 h-8 rounded-full bg-blue-100 dark:bg-gray-500 text-blue-600 dark:text-blue-300 text-sm font-medium flex items-center justify-center mb-1">
-                                        64</dt>
+                                        {{ $intereses->count() }}
+                                    </dt>
                                     <dd class="text-blue-600 dark:text-blue-300 text-sm font-medium">Interest</dd>
                                 </dl>
                                 <dl
                                     class="bg-blue-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
                                     <dt
                                         class="w-8 h-8 rounded-full bg-blue-100 dark:bg-gray-500 text-blue-600 dark:text-blue-300 text-sm font-medium flex items-center justify-center mb-1">
-                                        64</dt>
+                                        {{ $experiences->count() }}
+                                    </dt>
                                     <dd class="text-blue-600 dark:text-blue-300 text-sm font-medium">Experience</dd>
                                 </dl>
                             </div>

@@ -17,7 +17,7 @@ class ReportController extends Controller
             'projects' => Project::latest()->get(),
             'educations' => Education::latest()->get(),
             'intereses' => Interest::latest()->get(),
-            'experineces' => Experience::latest()->get(),
+            'experiences' => Experience::latest()->get(),
         ]);
     }
 }

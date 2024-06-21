@@ -34,7 +34,7 @@
                             </tr>
                         </thead>
                         <tbody class="bg-gray-500">
-                            @if ($datas->count() > 0)
+                            @if ($educations->count() > 0)
                                 @foreach ($educations as $data)
                                     <tr class="text-white">
                                         <td class="px-6 py-2 border border-slate-700">{{ $data->degree }}</td>
@@ -42,17 +42,16 @@
                                         <td class="px-6 py-2 border border-slate-700">{{ $data->education_name }}</td>
                                         <td class="px-6 py-2 border border-slate-700">{{ $data->graduation_year }}</td>
                                         <td class="px-6 py-2 border border-slate-700">
-                                            <a href="/education/{{ $data->id }}/edit" class="">
-                                                Edit</span>
-                                            </a>
+                                            <x-link-small-button :url="url('/education/{{ $data->id }}/edit')">
+                                                {{ __('Edit') }}
+                                            </x-link-small-button>
                                             <form action="/education/{{ $data->id }}/delete" method="post"
                                                 class="d-inline">
                                                 @method('delete')
                                                 @csrf
-                                                <button class=""
-                                                    onclick="return confirm('Are you sure want to delete {{ $data->company }}?')">
-                                                    Hapus</span>
-                                                </button>
+                                                <x-delete-button :message="$data->degree">
+                                                    Delete
+                                                </x-delete-button>
                                             </form>
                                         </td>
                                     </tr>

@@ -49,8 +49,9 @@
                                                 </div>
                                                 <div
                                                     class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                                    <x-link-small-button
-                                                        :url="url('/pdf/show/cv/' . $user->id)">{{ __('CV') }}</x-link-small-button>
+                                                    <x-link-small-button :url="url('/pdf/show/cv/' . $user->id)">
+                                                        {{ __('CV') }}
+                                                    </x-link-small-button>
                                                 </div>
                                             </div>
                                         </li>

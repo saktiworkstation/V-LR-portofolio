@@ -33,10 +33,9 @@
                                                 class="d-inline">
                                                 @method('delete')
                                                 @csrf
-                                                <button class=""
-                                                    onclick="return confirm('Are you sure want to delete message from {{ $data->name }}?')">
-                                                    Delete</span>
-                                                </button>
+                                                <x-delete-button :message="$data->name">
+                                                    Delete
+                                                </x-delete-button>
                                             </form>
                                         </td>
                                     </tr>

@@ -40,17 +40,16 @@
                                         <td class="px-6 py-2 border border-slate-700">{{ $data->description }}</td>
                                         <td class="px-6 py-2 border border-slate-700">{{ $data->skill_level }}</td>
                                         <td class="px-6 py-2 border border-slate-700">
-                                            <a href="/skill/{{ $data->id }}/edit" class="">
-                                                Edit</span>
-                                            </a>
+                                            <x-link-small-button :url="url('/skill/' . $data->id . '/edit')">
+                                                {{ __('Edit') }}
+                                            </x-link-small-button>
                                             <form action="/skill/{{ $data->id }}/delete" method="post"
                                                 class="d-inline">
                                                 @method('delete')
                                                 @csrf
-                                                <button class=""
-                                                    onclick="return confirm('Are you sure want to delete {{ $data->name }}?')">
-                                                    Hapus</span>
-                                                </button>
+                                                <x-delete-button :message="$data->name">
+                                                    Delete
+                                                </x-delete-button>
                                             </form>
                                         </td>
                                     </tr>

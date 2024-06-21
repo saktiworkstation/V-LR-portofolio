@@ -42,7 +42,7 @@
                                         <td class="px-6 py-2 border border-slate-700">{{ $data->education_name }}</td>
                                         <td class="px-6 py-2 border border-slate-700">{{ $data->graduation_year }}</td>
                                         <td class="px-6 py-2 border border-slate-700">
-                                            <x-link-small-button :url="url('/education/{{ $data->id }}/edit')">
+                                            <x-link-small-button :url="url('/education/' . $data->id . '/edit')">
                                                 {{ __('Edit') }}
                                             </x-link-small-button>
                                             <form action="/education/{{ $data->id }}/delete" method="post"

@@ -49,9 +49,15 @@ class SkillController extends Controller
      */
     public function edit($id)
     {
-        return view('skill.edit', [
-            'data' => Skill::where('id', $id)->firstOrFail(),
-        ]);
+        $skill = Skill::where('id', $id)->firstOrFail();
+        if ($skill && $skill->user_id == Auth::user()->id) {
+            return view('skill.edit', [
+                'data' => Skill::where('id', $id)->firstOrFail(),
+            ]);
+        }
+        else {
+            return redirect('skill')->with('success', 'Skill Not Faund');
+        }
     }
 
     /**
@@ -75,7 +81,7 @@ class SkillController extends Controller
             return redirect('skill')->with('success', 'Skill has been updated!');
         }
         else{
-            return 'Skill Not Faund';
+            return redirect('skill')->with('success', 'Skill Not Faund');
         }
     }
 
@@ -84,7 +90,17 @@ class SkillController extends Controller
      */
     public function destroy($id)
     {
-        Skill::destroy($id);
-        return redirect('skill')->with('success', 'Skill has been deleted!');
+        $skill = Skill::where('id', $id)->firstOrFail();
+        $user = Auth::user();
+        if ($skill && ($skill->user_id == Auth::user()->id || $user->hasRole('admin'))) {
+            Skill::destroy($id);
+            if($user->hasRole('admin')){
+                return redirect('report/skill')->with('success', 'Skill has been deleted!');
+            }
+            return redirect('skill')->with('success', 'Skill has been deleted!');
+        }
+        else {
+            return redirect('skill')->with('success', 'Skill Not Faund');
+        }
     }
 }

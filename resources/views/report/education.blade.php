@@ -8,21 +8,15 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    <x-link-primary-button :url="route('education.create')">{{ __('Add New Education') }}</x-link-primary-button>
-                </div>
-                @if (session()->has('success'))
-                    <x-success-alert>
-                        {{ session('success') }}
-                    </x-success-alert>
-                @endif
-            </div>
-
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="max-w-7xl">
                     <h4 class="pb-3 font-semibold text-xl text-gray-800 leading-tight">
                         {{ __('Education Data') }}
                     </h4>
+                    @if (session()->has('success'))
+                        <x-success-alert>
+                            {{ session('success') }}
+                        </x-success-alert>
+                    @endif
                     <table class="border-collapse border-slate-500">
                         <thead class="bg-gray-800 text-white">
                             <tr>

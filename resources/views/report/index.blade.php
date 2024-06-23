@@ -81,16 +81,16 @@
                                 <x-link-primary-button :url="route('report.skill')">
                                     {{ __('Skill Report') }}
                                 </x-link-primary-button>
-                                <x-link-primary-button :url="route('report')">
+                                <x-link-primary-button :url="route('report.project')">
                                     {{ __('Project Report') }}
                                 </x-link-primary-button>
-                                <x-link-primary-button :url="route('report')">
+                                <x-link-primary-button :url="route('report.education')">
                                     {{ __('Education Report') }}
                                 </x-link-primary-button>
-                                <x-link-primary-button :url="route('report')">
+                                <x-link-primary-button :url="route('report.interest')">
                                     {{ __('Interest Report') }}
                                 </x-link-primary-button>
-                                <x-link-primary-button :url="route('report')">
+                                <x-link-primary-button :url="route('report.experience')">
                                     {{ __('Experience Report') }}
                                 </x-link-primary-button>
                             </div>

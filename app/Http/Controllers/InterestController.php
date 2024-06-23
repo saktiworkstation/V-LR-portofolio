@@ -47,9 +47,15 @@ class InterestController extends Controller
      */
     public function edit($id)
     {
-        return view('interest.edit',[
-            'data' => Interest::where('id', $id)->firstOrFail(),
-        ]);
+        $interest = Interest::where('id', $id)->firstOrFail();
+        if($interest && $interest->user_id == Auth::user()->id){
+            return view('interest.edit',[
+                'data' => Interest::where('id', $id)->firstOrFail(),
+            ]);
+            }
+        else{
+            return redirect('interest')->with('success', 'Interest Not Faund');
+        }
     }
 
     /**
@@ -70,7 +76,7 @@ class InterestController extends Controller
             return redirect('interest')->with('success', 'Interest has been updated!');
         }
         else{
-            return 'Interest Not Faund';
+            return redirect('interest')->with('success', 'Interest Not Faund');
         }
     }
 
@@ -79,7 +85,17 @@ class InterestController extends Controller
      */
     public function destroy($id)
     {
-        Interest::destroy($id);
-        return redirect('interest')->with('success', 'Interest has been deleted!');
+        $interest = Interest::where('id', $id)->firstOrFail();
+        $user = Auth::user();
+        if ($interest && ($interest->user_id == Auth::user()->id || $user->hasRole('admin'))) {
+            Interest::destroy($id);
+            if($user->hasRole('admin')){
+                return redirect('report/interest')->with('success', 'Interest has been deleted!');
+            }
+                return redirect('interest')->with('success', 'Interest has been deleted!');
+            }
+        else {
+            return redirect('report/interest')->with('success', 'Interest Not Faund');
+        }
     }
 }

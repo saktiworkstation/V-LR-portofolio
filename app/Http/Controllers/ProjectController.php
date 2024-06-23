@@ -55,9 +55,15 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        return view('project.edit', [
-            'data' => Project::where('id', $id)->firstOrFail(),
-        ]);
+        $project = Project::where('id', $id)->firstOrFail();
+        if ($project && $project->user_id == Auth::user()->id) {
+            return view('project.edit', [
+                'data' => Project::where('id', $id)->firstOrFail(),
+            ]);
+        }
+        else {
+            return redirect('project')->with('success', 'Project Not Faund');
+        }
     }
 
     /**
@@ -87,7 +93,7 @@ class ProjectController extends Controller
             return redirect('project')->with('success', 'project has been updated!');
         }
         else{
-            return 'Project Not Faund';
+            return redirect('project')->with('success', 'Project Not Faund');
         }
     }
 
@@ -97,11 +103,19 @@ class ProjectController extends Controller
     public function destroy($id)
     {
         $project = Project::where('id', $id)->firstOrFail();
-        if ($project->img) {
-            Storage::delete($project->img);
+        $user = Auth::user();
+        if ($project && ($project->user_id == Auth::user()->id || $user->hasRole('admin'))) {
+            if ($project->img) {
+                Storage::delete($project->img);
+            }
+            Project::destroy($project->id);
+            if($user->hasRole('admin')){
+                return redirect('report/project')->with('success', 'Project has been deleted!');
+            }
+            return redirect('project')->with('success', 'Project has been deleted!');
         }
-
-        Project::destroy($project->id);
-        return redirect('project')->with('success', 'Project has been deleted!');
+        else {
+            return redirect('project')->with('success', 'Project Not Faund');
+        }
     }
 }

@@ -51,9 +51,14 @@ class ExperienceController extends Controller
     public function edit($id)
     {
         $experience = Experience::where('id', $id)->firstOrFail();
-        return view('experience.edit', [
-            'data' => $experience
-        ]);
+        if ($experience && $experience->user_id == Auth::user()->id) {
+            return view('experience.edit', [
+                'data' => $experience
+            ]);
+        }
+        else {
+            return redirect('experience')->with('success', 'Experience Not Faund');
+        }
     }
 
     /**
@@ -62,26 +67,21 @@ class ExperienceController extends Controller
     public function update($id, Request $request)
     {
         $experience = Experience::where('id', $id)->firstOrFail();
-        if ($experience && $experience->user_id == Auth::user()->id) {
-            $rules = [
-                'company' => 'required|max:255',
-                'duration' => 'required|max:255',
-                'field' => 'required',
-            ];
+        $rules = [
+            'company' => 'required|max:255',
+            'duration' => 'required|max:255',
+            'field' => 'required',
+        ];
 
-            if ($request->order != $experience->order) {
-                $rules['order'] = 'required|numeric|unique:experiences';
-            }
-
-            $validatedData = $request->validate($rules);
-
-            Experience::where('id', $id)->update($validatedData);
-
-            return redirect('experience')->with('success', 'experience has been updated!');
+        if ($request->order != $experience->order) {
+            $rules['order'] = 'required|numeric|unique:experiences';
         }
-        else {
-            return 'Experience Not Faund';
-        }
+
+        $validatedData = $request->validate($rules);
+
+        Experience::where('id', $id)->update($validatedData);
+
+        return redirect('experience')->with('success', 'experience has been updated!');
     }
 
     /**
@@ -89,7 +89,17 @@ class ExperienceController extends Controller
      */
     public function destroy($id)
     {
-        Experience::destroy($id);
-        return redirect('experience')->with('success', 'Experience has been deleted!');
+        $experience = Experience::where('id', $id)->firstOrFail();
+        $user = Auth::user();
+        if ($experience && ($experience->user_id == Auth::user()->id || $user->hasRole('admin'))) {
+            Experience::destroy($id);
+            if($user->hasRole('admin')){
+                return redirect('report/experience')->with('success', 'Experience has been deleted!');
+            }
+            return redirect('experience')->with('success', 'Experience has been deleted!');
+        }
+        else {
+            return redirect('experience')->with('success', 'Experience Not Faund');
+        }
     }
 }

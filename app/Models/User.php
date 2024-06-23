@@ -3,6 +3,11 @@
 namespace App\Models;
 
 use App\Models\Skill;
+use App\Models\Rating;
+use App\Models\Project;
+use App\Models\Interest;
+use App\Models\Education;
+use App\Models\Experience;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
@@ -50,4 +55,30 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->HasMany(Skill::class);
     }
+
+    public function Rating()
+    {
+        return $this->belongsTo(Rating::class, 'user_id');
+    }
+
+    public function Project()
+    {
+        return $this->belongsTo(Project::class, 'user_id');
+    }
+
+    public function Interest()
+    {
+        return $this->belongsTo(Interest::class, 'user_id');
+    }
+
+    public function Experience()
+    {
+        return $this->belongsTo(Experience::class, 'user_id');
+    }
+
+    public function Education()
+    {
+        return $this->belongsTo(Education::class, 'user_id');
+    }
+
 }

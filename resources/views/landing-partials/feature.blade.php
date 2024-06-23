@@ -7,8 +7,8 @@
     AOS.init();
 </script>
 
-<section class="pt-20 pb-12 lg:pt-[120px] lg:pb-[30px] bg-white dark:bg-dark" id="feature">
-    <div class="container mx-auto max-w-[100%]">
+<section class="pt-20 pb-12 lg:pt-[120px] lg:pb-[30px]  bg-white dark:bg-dark"  id="feature">
+    <div class="container mx-auto max-w-[100%]" data-aos="fade-down-left">
         <div class="-mx-4 flex flex-wrap">
             <div class="w-full px-4">
                 <div class="mx-auto mb-[40px] max-w-[510px] text-center">

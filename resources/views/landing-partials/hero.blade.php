@@ -1,8 +1,12 @@
 
 <!-- particles.js library -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 
-{{-- hero start --}}
+
 {{-- hero start --}}
 <div class="mx-auto py-52 bg-slate-800 relative" data-aos="fade-down-left" id="hero">
     <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>

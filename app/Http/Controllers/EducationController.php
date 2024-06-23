@@ -57,7 +57,7 @@ class EducationController extends Controller
             ]);
         }
         else{
-            return 'Education Not Faund';
+            return redirect('education')->with('success', 'education not found!');
         }
     }
 
@@ -67,19 +67,23 @@ class EducationController extends Controller
     public function update(Request $request, $id)
     {
         $education = Education::where('id', $id)->firstOrFail();
-        $rules = [
-            'degree' => 'required|max:70',
-            'field_of_study' => 'required|max:100',
-            'education_name' => 'required|max:100',
-            'graduation_year' => 'required|max:50',
-        ];
+        if($education && $education->user_id == Auth::user()->id){
+            $rules = [
+                'degree' => 'required|max:70',
+                'field_of_study' => 'required|max:100',
+                'education_name' => 'required|max:100',
+                'graduation_year' => 'required|max:50',
+            ];
 
-        $validatedData = $request->validate($rules);
+            $validatedData = $request->validate($rules);
 
-        Education::where('id', $id)->update($validatedData);
+            Education::where('id', $id)->update($validatedData);
 
-        return redirect('education')->with('success', 'education has been updated!');
-
+            return redirect('education')->with('success', 'education has been updated!');
+        }
+        else{
+            return redirect('education')->with('success', 'education not found!');
+        }
     }
 
     /**

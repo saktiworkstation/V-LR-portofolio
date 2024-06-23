@@ -50,9 +50,15 @@ class EducationController extends Controller
      */
     public function edit($id)
     {
-        return view('education.edit',[
-            'data' => Education::where('id', $id)->firstOrFail(),
-        ]);
+        $education = Education::where('id', $id)->firstOrFail();
+        if($education && $education->user_id == Auth::user()->id){
+            return view('education.edit',[
+                'data' => Education::where('id', $id)->firstOrFail(),
+            ]);
+        }
+        else{
+            return 'Education Not Faund';
+        }
     }
 
     /**
@@ -61,23 +67,19 @@ class EducationController extends Controller
     public function update(Request $request, $id)
     {
         $education = Education::where('id', $id)->firstOrFail();
-        if($education && $education->user_id == Auth::user()->id){
-            $rules = [
-                'degree' => 'required|max:70',
-                'field_of_study' => 'required|max:100',
-                'education_name' => 'required|max:100',
-                'graduation_year' => 'required|max:50',
-            ];
+        $rules = [
+            'degree' => 'required|max:70',
+            'field_of_study' => 'required|max:100',
+            'education_name' => 'required|max:100',
+            'graduation_year' => 'required|max:50',
+        ];
 
-            $validatedData = $request->validate($rules);
+        $validatedData = $request->validate($rules);
 
-            Education::where('id', $id)->update($validatedData);
+        Education::where('id', $id)->update($validatedData);
 
-            return redirect('education')->with('success', 'education has been updated!');
-        }
-        else{
-            return 'Education Not Faund';
-        }
+        return redirect('education')->with('success', 'education has been updated!');
+
     }
 
     /**
@@ -85,7 +87,17 @@ class EducationController extends Controller
      */
     public function destroy($id)
     {
-        Education::destroy($id);
-        return redirect('education')->with('success', 'Education has been deleted!');
+        $education = Education::where('id', $id)->firstOrFail();
+        $user = Auth::user();
+        if ($education && ($education->user_id == Auth::user()->id || $user->hasRole('admin'))) {
+            Education::destroy($id);
+            if($user->hasRole('admin')){
+                return redirect('report/education')->with('success', 'Education has been deleted!');
+            }
+                return redirect('education')->with('success', 'Education has been deleted!');
+            }
+        else {
+            return redirect('report/education')->with('success', 'Education Not Faund');
+        }
     }
 }

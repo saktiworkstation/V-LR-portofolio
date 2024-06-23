@@ -44,4 +44,10 @@ class ReportController extends Controller
             'datas' => Interest::latest()->get(),
         ]);
     }
+
+    public function experience(){
+        return view('report.experience',[
+            'datas' => Experience::latest()->get(),
+        ]);
+    }
 }

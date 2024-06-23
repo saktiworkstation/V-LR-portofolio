@@ -145,6 +145,11 @@ Route::controller(RoleManageController::class)->group(function () {
 Route::controller(ReportController::class)->group(function () {
     Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
         Route::get('/report', 'index')->name('report');
+        Route::get('/report/skill', 'skill')->name('report.skill');
+        Route::get('/report/project', 'project')->name('report.project');
+        Route::get('/report/education', 'education')->name('report.education');
+        Route::get('/report/interest', 'interest')->name('report.interest');
+        Route::get('/report/experience', 'experience')->name('report.experience');
     });
 });
 

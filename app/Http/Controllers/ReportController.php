@@ -20,4 +20,10 @@ class ReportController extends Controller
             'experiences' => Experience::latest()->get(),
         ]);
     }
+
+    public function skill(){
+        return view('report.skill',[
+            'skills' => Skill::latest()->get(),
+        ]);
+    }
 }

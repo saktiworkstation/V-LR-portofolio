@@ -38,4 +38,10 @@ class ReportController extends Controller
             'educations' => Education::latest()->get(),
         ]);
     }
+
+    public function interest(){
+        return view('report.interest',[
+            'datas' => Interest::latest()->get(),
+        ]);
+    }
 }

@@ -1,7 +1,13 @@
+
+<!-- particles.js library -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
 {{-- hero start --}}
-<div class="mx-auto py-52 bg-slate-800" data-aos="fade-down-left" id="hero">
-    <div class="row max-w-[90%] mx-auto flex justify-center h-auto items-center">
-        <div class="w-1/2 ps-40 pe-5 py-5">
+{{-- hero start --}}
+<div class="mx-auto py-52 bg-slate-800 relative" data-aos="fade-down-left" id="hero">
+    <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>
+    <div class="row max-w-[90%] mx-auto flex justify-center h-auto items-center relative z-10">
+        <div class="w-1/2 ps-40 pe-5 py-5" data-aos="fade-up" data-aos-delay="200">
             {{-- Content --}}
             <h1 class="text-8xl font-bold mb-5 text-slate-100 mt-8">
                 Create Your CV <span class="">Practically and Easily</span>
@@ -19,10 +25,125 @@
                 create Now &rarr;
             </a>
         </div>
-        <div class="w-1/2">
+        <div class="w-1/2" data-aos="fade-left" data-aos-delay="400">
             <img src="/img/banner.png" alt="Be Good" class="w-6/6">
         </div>
     </div>
-
 </div>
+{{-- hero end --}}
+
+<!-- particles.js configuration -->
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "star",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 20,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 3,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+</script>
+
 {{-- hero end --}}

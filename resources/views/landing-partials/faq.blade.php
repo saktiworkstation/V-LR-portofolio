@@ -16,7 +16,7 @@
     </div>
     <div class="max-w-[75%] mx-auto bg-white flex flex-wrap">
         <div class="w-1/2">
-        <div class="max-w-lg max-h-[250px] p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="max-w-[370px] max-h-[250px] p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
                 <h3 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Let's Talk</h3>
             </a>
@@ -81,7 +81,7 @@
             <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
             <h2 id="accordion-flush-heading-1">
                 <button type="button" class="flex items-center justify-between w-full py-5 pr-2 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
-                <span>How to make a CV?</span>
+                <span> How to make a CV?</span>
                 <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
                 </svg>

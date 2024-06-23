@@ -23,7 +23,7 @@ class ReportController extends Controller
 
     public function skill(){
         return view('report.skill',[
-            'skills' => Skill::latest()->get(),
+            'datas' => Skill::latest()->get(),
         ]);
     }
 }

@@ -1,6 +1,12 @@
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
 {{-- Experience Section --}}
 
-<div class="max-w-[50%] h-[300px] mx-auto p-6 pt-10 bg-white border border-gray-200  shadow-inner shadow-neutral-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+
+<div class= "max-w-[50%] h-[300px] mx-auto p-6 pt-10 bg-white border border-gray-200  shadow-inner shadow-neutral-200 rounded-lg dark:bg-gray-800 dark:border-gray-700" data-aos="zoom-in-up">
     <div class="mx-auto max-w-screen-xl ">
         <div class="max-w-screen-md text-center mx-auto">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white animate-bounce">Let's Start Make Your CV With Us.</h2>
@@ -13,6 +19,13 @@
         </div>
     </div>
 </div>
+
+<script>
+    AOS.init({
+        duration: 2000, // Durasi animasi dalam milidetik
+        once: false,     // Apakah animasi hanya diputar sekali saat di-scroll ke dalam viewport
+    });
+</script>
 
 <style>
     @keyframes bounce {

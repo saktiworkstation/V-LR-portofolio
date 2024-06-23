@@ -32,4 +32,10 @@ class ReportController extends Controller
             'datas' => Project::latest()->get(),
         ]);
     }
+
+    public function education(){
+        return view('report.education',[
+            'educations' => Education::latest()->get(),
+        ]);
+    }
 }

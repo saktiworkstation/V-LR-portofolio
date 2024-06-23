@@ -26,4 +26,10 @@ class ReportController extends Controller
             'datas' => Skill::latest()->get(),
         ]);
     }
+
+    public function project(){
+        return view('report.project',[
+            'datas' => Project::latest()->get(),
+        ]);
+    }
 }

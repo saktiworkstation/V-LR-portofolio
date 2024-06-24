@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Skill;
+use App\Models\Project;
+use App\Models\Interest;
 use App\Models\Education;
 use App\Models\Experience;
-use App\Models\Interest;
-use App\Models\Project;
-use App\Models\Skill;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf as FacadePdf;
 
@@ -14,6 +15,7 @@ class PDFController extends Controller
 {
     public function showCV($id){
         return view('pdf.cv', [
+            'users' => User::where('id', $id)->firstOrFail(),
             'skills' => Skill::where('user_id', $id)->latest()->get(),
             'projects' => Project::where('user_id', $id)->latest()->get(),
             'educations' => Education::where('user_id', $id)->latest()->get(),
@@ -24,6 +26,7 @@ class PDFController extends Controller
 
     public function downloadCV($id){
         $pdf = FacadePdf::loadView('pdf.cv', [
+            'users' => User::where('id', $id)->firstOrFail(),
             'skills' => Skill::where('user_id', $id)->latest()->get(),
             'projects' => Project::where('user_id', $id)->latest()->get(),
             'educations' => Education::where('user_id', $id)->latest()->get(),

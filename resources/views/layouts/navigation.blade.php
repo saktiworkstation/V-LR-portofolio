@@ -36,6 +36,10 @@
                         <x-nav-link :href="route('project')" :active="request()->routeIs('project')">
                             {{ __('Project') }}
                         </x-nav-link>
+
+                        <x-nav-link :href="route('personal')" :active="request()->routeIs('personal')">
+                            {{ __('Personal Data') }}
+                        </x-nav-link>
                     @endrole
 
                     @role('admin')
@@ -141,6 +145,9 @@
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('project')" :active="request()->routeIs('project')">
                     {{ __('Project') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('personal')" :active="request()->routeIs('personal')">
+                    {{ __('Personal Data') }}
                 </x-responsive-nav-link>
             @endrole
             @role('admin')

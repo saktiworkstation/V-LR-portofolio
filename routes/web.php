@@ -157,7 +157,7 @@ Route::controller(ReportController::class)->group(function () {
 Route::controller(PersonalDataController::class)->group(function () {
     Route::middleware(['auth', 'verified', 'role:user'])->group(function () {
         Route::get('/personal', 'index')->name('personal');
-        Route::put('/personal/update', 'update')->name('personal.update');
+        Route::put('/personal/update', 'update');
     });
 });
 

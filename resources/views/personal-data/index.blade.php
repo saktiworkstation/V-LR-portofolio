@@ -18,6 +18,12 @@
                             <p class="mt-1 text-sm text-gray-600">
                                 {{ __('Added fill  your personal data here.') }}
                             </p>
+
+                            @if (session()->has('success'))
+                                <x-success-alert>
+                                    {{ session('success') }}
+                                </x-success-alert>
+                            @endif
                         </header>
 
                         <form method="POST" action="/personal/update" class="mt-6 space-y-6">

@@ -22,7 +22,7 @@ class PersonalDataController extends Controller
         $user = Auth::user();
         if(Auth::user()->roles->contains('name', 'user')){
             $rules = [
-                'phonenumber' => 'required|numeric',
+                'number' => 'required|numeric',
                 'address' => 'required',
                 'linkporto' => 'required|url',
                 'description' => 'required',

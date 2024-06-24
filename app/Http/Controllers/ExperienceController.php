@@ -96,9 +96,9 @@ class ExperienceController extends Controller
     {
         $experience = Experience::where('id', $id)->firstOrFail();
         $user = Auth::user();
-        if ($experience && ($experience->user_id == Auth::user()->id || $user->hasRole('admin'))) {
+        if ($experience && ($experience->user_id == Auth::user()->id || $user->roles->contains('name', 'admin'))) {
             Experience::destroy($id);
-            if($user->hasRole('admin')){
+            if($user->roles->contains('name', 'admin')){
                 return redirect('report/experience')->with('success', 'Experience has been deleted!');
             }
             return redirect('experience')->with('success', 'Experience has been deleted!');

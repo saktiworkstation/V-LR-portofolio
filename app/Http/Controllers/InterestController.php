@@ -87,9 +87,9 @@ class InterestController extends Controller
     {
         $interest = Interest::where('id', $id)->firstOrFail();
         $user = Auth::user();
-        if ($interest && ($interest->user_id == Auth::user()->id || $user->hasRole('admin'))) {
+        if ($interest && ($interest->user_id == Auth::user()->id || $user->roles->contains('name', 'admin'))) {
             Interest::destroy($id);
-            if($user->hasRole('admin')){
+            if($user->roles->contains('name', 'admin')){
                 return redirect('report/interest')->with('success', 'Interest has been deleted!');
             }
                 return redirect('interest')->with('success', 'Interest has been deleted!');

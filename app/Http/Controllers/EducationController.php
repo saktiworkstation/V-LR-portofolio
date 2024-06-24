@@ -93,9 +93,9 @@ class EducationController extends Controller
     {
         $education = Education::where('id', $id)->firstOrFail();
         $user = Auth::user();
-        if ($education && ($education->user_id == Auth::user()->id || $user->hasRole('admin'))) {
+        if ($education && ($education->user_id == Auth::user()->id || $user->roles->contains('name', 'admin'))) {
             Education::destroy($id);
-            if($user->hasRole('admin')){
+            if($user->roles->contains('name', 'admin')){
                 return redirect('report/education')->with('success', 'Education has been deleted!');
             }
                 return redirect('education')->with('success', 'Education has been deleted!');

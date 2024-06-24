@@ -92,9 +92,9 @@ class SkillController extends Controller
     {
         $skill = Skill::where('id', $id)->firstOrFail();
         $user = Auth::user();
-        if ($skill && ($skill->user_id == Auth::user()->id || $user->hasRole('admin'))) {
+        if ($skill && ($skill->user_id == Auth::user()->id || $user->roles->contains('name', 'admin'))) {
             Skill::destroy($id);
-            if($user->hasRole('admin')){
+            if($user->roles->contains('name', 'admin')){
                 return redirect('report/skill')->with('success', 'Skill has been deleted!');
             }
             return redirect('skill')->with('success', 'Skill has been deleted!');

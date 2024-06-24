@@ -20,6 +20,7 @@
                     <table class="border-collapse border-slate-500">
                         <thead class="bg-gray-800 text-white">
                             <tr>
+                                <th class="px-6 py-2 border border-slate-600">User</th>
                                 <th class="px-6 py-2 border border-slate-600">Company</th>
                                 <th class="px-6 py-2 border border-slate-600">Order</th>
                                 <th class="px-6 py-2 border border-slate-600">Field</th>
@@ -31,6 +32,7 @@
                             @if ($datas->count() > 0)
                                 @foreach ($datas as $data)
                                     <tr class="text-white">
+                                        <td class="px-6 py-2 border border-slate-700">{{ $data->User->name }}</td>
                                         <td class="px-6 py-2 border border-slate-700">{{ $data->company }}</td>
                                         <td class="px-6 py-2 border border-slate-700">{{ $data->order }}</td>
                                         <td class="px-6 py-2 border border-slate-700">{{ $data->field }}</td>

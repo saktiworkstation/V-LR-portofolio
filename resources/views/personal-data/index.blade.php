@@ -16,7 +16,7 @@
                             </h2>
 
                             <p class="mt-1 text-sm text-gray-600">
-                                {{ __('Added your newes personal here.') }}
+                                {{ __('Added fill  your personal data here.') }}
                             </p>
                         </header>
 
@@ -25,27 +25,30 @@
                             @method('PUT')
                             <div>
                                 <x-input-label for="number" :value="__('Phone Number')" />
-                                <x-text-input id="number" name="number" type="text" class="mt-1 block w-full"
-                                    :value="old('number', $data->number)" required autofocus autocomplete="number" />
+                                <x-text-input id="number" name="number" type="number" class="mt-1 block w-full"
+                                    :value="old('number', $data->number)" required autofocus autocomplete="number"
+                                    placeholder="Your phone number" />
                                 <x-input-error class="mt-2" :messages="$errors->get('number')" />
                             </div>
                             <div>
                                 <x-input-label for="address" :value="__('Phone address')" />
                                 <x-text-input id="address" name="address" type="text" class="mt-1 block w-full"
-                                    :value="old('address', $data->address)" required autofocus autocomplete="address" />
+                                    :value="old('address', $data->address)" required autofocus autocomplete="address"
+                                    placeholder="Your address" />
                                 <x-input-error class="mt-2" :messages="$errors->get('address')" />
                             </div>
                             <div>
                                 <x-input-label for="linkporto" :value="__('Phone linkporto')" />
                                 <x-text-input id="linkporto" name="linkporto" type="text" class="mt-1 block w-full"
-                                    :value="old('linkporto', $data->linkporto)" required autofocus autocomplete="linkporto" />
+                                    :value="old('linkporto', $data->linkporto)" required autofocus autocomplete="linkporto"
+                                    placeholder="Link your other porto like github or linkedin" />
                                 <x-input-error class="mt-2" :messages="$errors->get('linkporto')" />
                             </div>
                             <div>
                                 <x-input-label for="description" :value="__('Phone description')" />
                                 <x-text-input id="description" name="description" type="text"
                                     class="mt-1 block w-full" :value="old('description', $data->description)" required autofocus
-                                    autocomplete="description" />
+                                    autocomplete="description" placeholder="Describe yourself" />
                                 <x-input-error class="mt-2" :messages="$errors->get('description')" />
                             </div>
 

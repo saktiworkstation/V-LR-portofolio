@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PersonalDataController;
 use App\Models\User;
 use App\Models\Skill;
 use App\Models\Rating;
@@ -150,6 +151,13 @@ Route::controller(ReportController::class)->group(function () {
         Route::get('/report/education', 'education')->name('report.education');
         Route::get('/report/interest', 'interest')->name('report.interest');
         Route::get('/report/experience', 'experience')->name('report.experience');
+    });
+});
+
+Route::controller(PersonalDataController::class)->group(function () {
+    Route::middleware(['auth', 'verified', 'role:user'])->group(function () {
+        Route::get('/personal', 'index')->name('person');
+        Route::put('/personal/update', 'update')->name('person.update');
     });
 });
 

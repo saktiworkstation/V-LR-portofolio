@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,11 +14,27 @@ class PersonalDataController extends Controller
                 'data' => Auth::user(),
             ]);
         }else{
-            return redirect('report/interest')->with('success', 'Cant Access');
+            return redirect('dashboard')->with('success', 'Cant Access');
         }
     }
 
-    public function update(){
-        // store update data
+    public function update(Request $request){
+        $user = Auth::user();
+        if(Auth::user()->roles->contains('name', 'user')){
+            $rules = [
+                'phonenumber' => 'required|numeric',
+                'address' => 'required',
+                'linkporto' => 'required|url',
+                'description' => 'required',
+            ];
+
+            $validatedData = $request->validate($rules);
+
+            User::where('id', $user->id)->update($validatedData);
+
+            return redirect('personal')->with('success', 'Personal Data has been updated!');
+        }else{
+            return redirect('dashboard')->with('success', 'Cant Access');
+        }
     }
 }

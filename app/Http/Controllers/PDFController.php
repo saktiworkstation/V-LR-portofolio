@@ -14,25 +14,35 @@ use Barryvdh\DomPDF\Facade\Pdf as FacadePdf;
 class PDFController extends Controller
 {
     public function showCV($id){
-        return view('pdf.cv', [
-            'users' => User::where('id', $id)->firstOrFail(),
-            'skills' => Skill::where('user_id', $id)->latest()->get(),
-            'projects' => Project::where('user_id', $id)->latest()->get(),
-            'educations' => Education::where('user_id', $id)->latest()->get(),
-            'intereses' => Interest::where('user_id', $id)->latest()->get(),
-            'experineces' => Experience::where('user_id', $id)->latest()->get(),
-        ]);
+        $user = User::where('id', $id)->firstOrFail();
+        if ($user) {
+            return view('pdf.cv', [
+                'users' => $user,
+                'skills' => Skill::where('user_id', $id)->latest()->get(),
+                'projects' => Project::where('user_id', $id)->latest()->get(),
+                'educations' => Education::where('user_id', $id)->latest()->get(),
+                'intereses' => Interest::where('user_id', $id)->latest()->get(),
+                'experineces' => Experience::where('user_id', $id)->latest()->get(),
+            ]);
+        }else{
+            return redirect('dashboard')->with('success', 'Failed to load cv');
+        }
     }
 
     public function downloadCV($id){
-        $pdf = FacadePdf::loadView('pdf.cv', [
-            'users' => User::where('id', $id)->firstOrFail(),
-            'skills' => Skill::where('user_id', $id)->latest()->get(),
-            'projects' => Project::where('user_id', $id)->latest()->get(),
-            'educations' => Education::where('user_id', $id)->latest()->get(),
-            'intereses' => Interest::where('user_id', $id)->latest()->get(),
-            'experineces' => Experience::where('user_id', $id)->latest()->get(),
-        ]);
-        return $pdf->download('pdf_file.pdf');
+        $user = User::where('id', $id)->firstOrFail();
+        if ($user) {
+            $pdf = FacadePdf::loadView('pdf.cv', [
+                'users' => $user,
+                'skills' => Skill::where('user_id', $id)->latest()->get(),
+                'projects' => Project::where('user_id', $id)->latest()->get(),
+                'educations' => Education::where('user_id', $id)->latest()->get(),
+                'intereses' => Interest::where('user_id', $id)->latest()->get(),
+                'experineces' => Experience::where('user_id', $id)->latest()->get(),
+            ]);
+            return $pdf->download('pdf_file.pdf');
+        }else{
+            return redirect('dashboard')->with('success', 'Failed to load cv');
+        }
     }
 }

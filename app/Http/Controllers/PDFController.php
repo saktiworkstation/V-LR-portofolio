@@ -17,11 +17,11 @@ class PDFController extends Controller
         $user = User::where('id', $id)->firstOrFail();
         if ($user) {
             return view('pdf.cv', [
-                'users' => $user,
+                'user' => $user,
                 'skills' => Skill::where('user_id', $id)->latest()->get(),
                 'projects' => Project::where('user_id', $id)->latest()->get(),
                 'educations' => Education::where('user_id', $id)->latest()->get(),
-                'intereses' => Interest::where('user_id', $id)->latest()->get(),
+                'interests' => Interest::where('user_id', $id)->latest()->get(),
                 'experineces' => Experience::where('user_id', $id)->latest()->get(),
             ]);
         }else{
@@ -33,11 +33,11 @@ class PDFController extends Controller
         $user = User::where('id', $id)->firstOrFail();
         if ($user) {
             $pdf = FacadePdf::loadView('pdf.cv', [
-                'users' => $user,
+                'user' => $user,
                 'skills' => Skill::where('user_id', $id)->latest()->get(),
                 'projects' => Project::where('user_id', $id)->latest()->get(),
                 'educations' => Education::where('user_id', $id)->latest()->get(),
-                'intereses' => Interest::where('user_id', $id)->latest()->get(),
+                'interests' => Interest::where('user_id', $id)->latest()->get(),
                 'experineces' => Experience::where('user_id', $id)->latest()->get(),
             ]);
             return $pdf->download('pdf_file.pdf');

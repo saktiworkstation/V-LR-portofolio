@@ -1,4 +1,4 @@
-# Personal Portfolio Template
+# VLR - Portofolio
 
 Welcome to my personal portfolio template! Below you'll find a brief overview of the features and their current status.
 

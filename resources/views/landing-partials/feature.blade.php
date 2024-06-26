@@ -63,7 +63,75 @@
                 </div>
             </div>
         </div>
-        
+        <section class="mb-32 w-full mt-20 mx-auto md:px-6">
+    <div class="p-8 pb-4 flex flex-wrap">
+        <div class="w-full lg:w-1/12"></div>
+        <div class="mb-6 w-full lg:mb-0 lg:w-3/12 lg:pr-6">
+            <div class="ripple relative overflow-hidden rounded-lg bg-cover bg-center bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
+                <img src="/img/instant-2.png" class="w-[175px] mx-auto object-cover" alt="Non-stop Services" />
+                <a href="#!">
+                    <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[rgba(0,0,0,0.2)] opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                </a>
+            </div>
+        </div>
+        <div class="w-full lg:w-7/12 pt-8 lg:pl-10 text-left">
+            <h3 class="mb-4 text-2xl font-bold">
+                <a href="#!">Non-stop Services</a>
+            </h3>
+            <p class="mb-6 text-neutral-500 text-md">
+                Our services operate non-stop, 24 hours a day, 7 days a week, ensuring that you have access to our support and resources whenever you need them. Whether day or night, weekdays or weekends, our dedicated team is always ready to help you 24-hour service ensures that you can rely on us at any time.
+            </p>
+            <button type="button" class="inline-block rounded bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-md transition duration-150 ease-in-out hover:bg-blue-900 focus:bg-blue-900 focus:outline-none">
+                View More
+            </button>
+        </div>
+    </div>
+    <div class="p-8 pb-4 flex flex-wrap lg:flex-row-reverse">
+        <div class="w-full lg:w-1/12"></div>
+        <div class="mb-6 w-full lg:mb-0 lg:w-3/12 lg:pl-6">
+            <div class="ripple relative overflow-hidden rounded-lg bg-cover bg-center bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
+                <img src="/img/easy-2.png" class="w-[175px] mx-auto object-cover" alt="Instant Creation" />
+                <a href="#!">
+                    <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[rgba(0,0,0,0.2)] opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                </a>
+            </div>
+        </div>
+        <div class="w-full lg:w-7/12 pt-8 lg:pr-10 text-left">
+            <h3 class="mb-4 text-2xl font-bold">
+                <a href="#!">Instant Creation</a>
+            </h3>
+            <p class="mb-6 text-neutral-500 text-md">
+                Our instant services are designed to meet your needs quickly and efficiently. With just a few clicks, you can access a variety of features that simplify tasks and save you valuable time. Experience the convenience of real-time functions and see how our instant services can increase your productivity.
+            </p>
+            <button type="button" class="inline-block rounded bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-md transition duration-150 ease-in-out hover:bg-blue-900 focus:bg-blue-900 focus:outline-none">
+                View More
+            </button>
+        </div>
+    </div>
+    <div class="p-8 pb-4 flex flex-wrap">
+        <div class="w-full lg:w-1/12"></div>
+        <div class="mb-6 w-full lg:mb-0 lg:w-3/12 lg:pr-6">
+            <div class="ripple relative overflow-hidden rounded-lg bg-cover bg-center bg-no-repeat" data-te-ripple-init data-te-ripple-color="light">
+                <img src="/img/free-2.png" class="w-[175px] mx-auto" alt="Free For All" />
+                <a href="#!">
+                    <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[rgba(0,0,0,0.2)] opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                </a>
+            </div>
+        </div>
+        <div class="w-full lg:w-7/12 pt-8 lg:pl-10 text-left">
+            <h3 class="mb-4 text-2xl font-bold">
+                <a href="#!">Free For All</a>
+            </h3>
+            <p class="mb-6 text-neutral-500 text-md">
+                Our service proudly offers free access to everyone, ensuring no one is excluded from its benefits. Whether you are a student, professional, or just someone looking to explore new tools, you can enjoy all our features at no cost to you.
+            </p>
+            <button type="button" class="inline-block rounded bg-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-md transition duration-150 ease-in-out hover:bg-blue-900 focus:bg-blue-900 focus:outline-none">
+                View More
+            </button>
+        </div>
+    </div>
+</section>
+
     <!-- Section: Design Block -->
     {{--<section class="mb-32 w-[100%] mt-20 mx-auto md:px-6 ">
         <div class="p-8 pb-4 flex flex-wrap">

@@ -69,6 +69,45 @@ Welcome to my personal portfolio template! Below you'll find a brief overview of
    - Status: On Going  
    Managing user data and roles on users.
 
+
+
+## Installation
+
+Install my-project with npm
+
+``` bash
+  npm install my-project
+  cd my-project
+  composer require laravel/breeze --dev
+  php artisan breeze:install
+  npm install
+  php artisan migrate:fresh --seed
+  composer require barryvdh/laravel-dompdf
+```
+
+## Run 
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+  composer install
+```
+
+Start the server
+
+```bash
+  npm run dev
+  php artisan serve
+```
+
+
 ### About Me:
 
 I am passionate about leveraging technology to create meaningful experiences and solve complex problems. Through this portfolio, I aim to share my journey, skills, and projects with the world. Stay tuned for updates as I continue to refine and expand this platform.

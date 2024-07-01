@@ -35,29 +35,30 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 
 {{-- hero start --}}
-<div class="mx-auto py-24 md:py-52 bg-slate-800 relative" data-aos="fade-down-left" id="hero">
+<div class="mx-auto py-40 lg:py-52 px-10 bg-slate-800 relative" data-aos="fade-down-left" id="hero">
     <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>
-    <div class="max-w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
-        <div class="ps-5 pe-5 md:ps-40 md:pe-5 py-5" data-aos="fade-up" data-aos-delay="200">
-            {{-- Content --}}
-            <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-5 text-slate-100 mt-8">
-                Create Your CV <span class="">Practically and Easily</span>
-            </h1>
-            <p class="text-slate-500 mb-4 text-justify pe-0 md:pe-10">
-                Do you want to create a CV simply and easily for yourself? Look no further! 
-                We have the perfect tools and features to help you create a CV that truly represents you. 
-                Our user-friendly interface allows you to showcase your work and achievements in a professional and organized manner. 
-                So why wait? Register now and start building your CV in just a few clicks!
-            </p>
+        <div class="row w-full md:max-w-[90%] mx-auto flex justify-center h-auto items-center relative z-10">
+            <div class="w-screen lg:w-1/2 md:ps-18 md:ps-20 lg:ps-18 2xl:ps-40 pe-5 py-5 " data-aos="fade-up" data-aos-delay="200">
+                <h1 class="text-[50px] leading-none sm:text-[70px] md:text-[75px] lg:text-7xl sm:pe-16 lg:pe-5 font-bold mb-5 text-slate-100 mt-8">
+                    Create Your CV <span class="">Practically and Easily</span>
+                </h1>
+                <p class="text-slate-500 mb-4 text-justify pe-10 md:w-[90%] lg:pe-5">
+                    Do you want to create a CV simply and easily for yourself? Look no further! 
+                    We have the perfect tools and features to help you create a CV that truly represents you. 
+                    Our user-friendly interface allows you to showcase your work and achievements in a professional and organized manner. 
+                    So why wait? Register now and start building your CV in just a few clicks!
+                </p>
+                
+                
+                <a href="#" rel="noopener noreferrer"
+                   class="uppercase w-auto h-[45px] inline-flex items-center px-4 py-3 bg-slate-100 border border-transparent rounded-md font-semibold text-md text-grey-500 tracking-widest hover:bg-neutral-300 my-5">
+                    create Now &rarr;
+                </a>
+            </div> 
 
-            {{-- button --}}
-            <a href="#" rel="noopener noreferrer"
-               class="uppercase w-auto h-[45px] inline-flex items-center px-4 py-3 bg-slate-100 border border-transparent rounded-md font-semibold text-md text-grey-500 tracking-widest hover:bg-neutral-300 my-5">
-                create Now &rarr;
-            </a>
-        </div>
-        <div class="w-full flex justify-center md:justify-end" data-aos="fade-left" data-aos-delay="400">
-            <img src="/img/banner.png" alt="Be Good" class="w-full md:w-4/5 lg:w-3/5">
+            <div class="hidden lg:flex w-1/2 " data-aos="fade-left" data-aos-delay="400">
+                <img src="/img/banner.png" alt="Be Good" class="lg:w-6/6">
+            </div>   
         </div>
     </div>
 </div>

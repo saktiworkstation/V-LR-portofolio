@@ -3,7 +3,7 @@
 
 
 
-<div class="bg-neutral-200 px-40 pt-24" id="testimoni">
+<div class="bg-neutral-200 px-5 py-20" id="testimoni">
     <div id="particles-js" class="absolute top-0 left-0 w-full h-full z-0"></div>
     <div class="container mx-auto ">
         <div class="grid-rows-4">
@@ -24,7 +24,7 @@
                                 <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/>
                             </svg> 
                             <blockquote>
-                                <p class="text-2xl font-medium text-gray-900 dark:text-white">"{{ $item->content }} <br> Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+                                <p class="text-2xl lg:text-2xl font-medium text-gray-900 dark:text-white">"{{ $item->content }}"</p>
                             </blockquote>
                             <figcaption class="flex items-center justify-center mt-6 space-x-3">
                                 <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
@@ -38,10 +38,12 @@
                 @endforeach
 
                 {{-- Side button --}}
-                <a href="#" rel="noopener noreferrer"
-                    class="absolute end-6 bottom-48 inline-flex items-center px-4 py-4 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white tracking-widest hover:bg-gray-700 my-auto">→</a>
-                <a href="#" rel="noopener noreferrer"
-                    class="absolute start-6 bottom-48 inline-flex items-center px-4 py-4 bg-white-800 border  rounded-md font-semibold text-xs text-black tracking-widest hover:bg-white-700 my-auto shadow-md">←</a>
+                <div class="hidden lg:block">
+                    <a href="#" rel="noopener noreferrer"
+                        class="absolute end-6 bottom-48 inline-flex items-center px-4 py-4 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white tracking-widest hover:bg-gray-700 my-auto">→</a>
+                    <a href="#" rel="noopener noreferrer"
+                        class="absolute start-6 bottom-48 inline-flex items-center px-4 py-4 bg-white-800 border  rounded-md font-semibold text-xs text-black tracking-widest hover:bg-white-700 my-auto shadow-md">←</a>
+                </div>
             </div>
         </div>
     </div>

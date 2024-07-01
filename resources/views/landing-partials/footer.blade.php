@@ -1,17 +1,17 @@
 <!-- Footer container -->
 <footer class="bg-zinc-50 text-center text-surface/75 dark:bg-slate-800 dark:text-white/75 lg:text-left relative">
   
-<div class="absolute -top-28 w-full">
+<div class="hidden lg:block absolute lg:-top-28 w-full">
   @include('landing-partials.cta')
 </div>
 
   <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
-  <div class="mx-auto w-[80%] py-10 text-center md:text-left pt-72">
-    <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+  <div class="mx-auto w-full lg:max-w-[80%] py-10 text-center md:text-left pt-72">
+    <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4  ">
       <!-- TW Elements section -->
       <div class="px-10 ">
         <h6
-          class="mb-4 flex items-center justify-start font-semibold uppercase md:justify-start">
+          class="mb-4 flex items-center justify-start text-3xl font-semibold uppercase md:justify-start">
           V-LR Corp
         </h6>
         <p class=" text-start">

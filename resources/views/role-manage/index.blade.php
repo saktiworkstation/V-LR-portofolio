@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="max-w-xl">
-                    <x-link-primary-button :url="route('role-manage.create')">{{ __('Assign Role to USer') }}</x-link-primary-button>
+                    <x-link-primary-button :url="route('role-manage.create')" class="bg-green-600 font-thin">{{ __('Assign Role to USer') }}</x-link-primary-button>
                 </div>
                 @if (session()->has('success'))
                     <x-success-alert>
@@ -19,22 +19,22 @@
             </div>
 
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-4xl">
+                <div class="w-full h-[500px]">
                     <h4 class="pb-3 font-semibold text-xl text-gray-800 leading-tight">
                         {{ __('role-manage Data') }}
                     </h4>
                     <table class="border-collapse border-slate-500">
-                        <thead class="bg-gray-800 text-white">
+                        <thead class="bg-gray-900 text-white">
                             <tr>
-                                <th class="px-6 py-2 border border-slate-600">User Name</th>
-                                <th class="px-6 py-2 border border-slate-600">User Role</th>
+                                <th class="px-6 py-2 font-light border border-slate-600">User Name</th>
+                                <th class="px-6 py-2 font-light border border-slate-600">User Role</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-gray-500">
+                        <tbody class="bg-slate-200">
                             @foreach ($datas as $data)
-                                <tr class="text-white">
-                                    <td class="px-6 py-2 border border-slate-700">{{ $data->name }}</td>
-                                    <td class="px-6 py-2 border border-slate-700">
+                                <tr class="text-dark">
+                                    <td class="px-6 py-3 border border-slate-700">{{ $data->name }}</td>
+                                    <td class="px-6 py-3 border border-slate-700">
                                         @foreach ($data->roles as $role)
                                             <form action="/role-manage/{{ $data->id }}/delete/{{ $role->name }}"
                                                 method="post" class="d-inline">

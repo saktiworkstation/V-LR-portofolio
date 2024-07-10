@@ -33,10 +33,6 @@ class PDFController extends Controller
         $user = User::where('id', $id)->firstOrFail();
         $mpdf = new \Mpdf\Mpdf();
         $mpdf->WriteHTML(view('pdf.cv', [
-
-       // if ($user) {
-          //  $pdf = FacadePdf::loadView('pdf.cv', [
-                                       
                 'user' => $user,
                 'skills' => Skill::where('user_id', $id)->latest()->get(),
                 'projects' => Project::where('user_id', $id)->latest()->get(),
@@ -45,10 +41,5 @@ class PDFController extends Controller
                 'experineces' => Experience::where('user_id', $id)->latest()->get(),
                 ]));
         $mpdf->Output();
-           // ]);
-         //   return $pdf->download('pdf_file.pdf');
-       // }else{
-        //    return redirect('dashboard')->with('success', 'Failed to load cv');
-       // }
     }
 }

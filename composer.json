@@ -11,7 +11,7 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "mpdf/mpdf": "^6.1",
+        "mpdf/mpdf": "^8.2",
         "spatie/laravel-permission": "^6.7"
     },
     "require-dev": {

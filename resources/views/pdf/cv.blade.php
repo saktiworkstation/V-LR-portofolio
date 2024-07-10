@@ -112,7 +112,7 @@
             </div>
         </main>
         <footer class="mt-6 text-center">
-            <a class="text-blue-400 text-sm pb-2" href="/pdf/download/cv/{{ $user->id }}" download>
+            <a class="text-blue-400 text-sm pb-2" href="/pdf/download/cv/{{ $user->id }}">
                 Download CV
             </a>
         </footer>

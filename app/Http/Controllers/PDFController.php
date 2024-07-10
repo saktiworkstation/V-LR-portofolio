@@ -43,10 +43,12 @@ class PDFController extends Controller
                 'educations' => Education::where('user_id', $id)->latest()->get(),
                 'interests' => Interest::where('user_id', $id)->latest()->get(),
                 'experineces' => Experience::where('user_id', $id)->latest()->get(),
-            ]);
-            return $pdf->download('pdf_file.pdf');
-        }else{
-            return redirect('dashboard')->with('success', 'Failed to load cv');
-        }
+                ]));
+        $mpdf->Output();
+           // ]);
+         //   return $pdf->download('pdf_file.pdf');
+       // }else{
+        //    return redirect('dashboard')->with('success', 'Failed to load cv');
+       // }
     }
 }

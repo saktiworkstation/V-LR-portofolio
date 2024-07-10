@@ -34,8 +34,9 @@ class PDFController extends Controller
         $mpdf = new \Mpdf\Mpdf();
         $mpdf->WriteHTML(view('pdf.cv', [
 
-        if ($user) {
-            $pdf = FacadePdf::loadView('pdf.cv', [
+       // if ($user) {
+          //  $pdf = FacadePdf::loadView('pdf.cv', [
+                                       
                 'user' => $user,
                 'skills' => Skill::where('user_id', $id)->latest()->get(),
                 'projects' => Project::where('user_id', $id)->latest()->get(),

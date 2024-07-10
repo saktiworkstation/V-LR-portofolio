@@ -32,7 +32,8 @@ class PDFController extends Controller
     public function downloadCV($id){
         $user = User::where('id', $id)->firstOrFail();
         $mpdf = new \Mpdf\Mpdf();
-        
+        $mpdf->WriteHTML(view('pdf.cv', [
+
         if ($user) {
             $pdf = FacadePdf::loadView('pdf.cv', [
                 'user' => $user,

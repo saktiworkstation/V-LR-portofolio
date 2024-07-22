@@ -47,7 +47,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
+            'url' => env('JAWSDB_URL'),
             'host' => $JAWSDB_URL['host'],
             'port' => $JAWSDB_URL['port'],
             'database' => ltrim($JAWSDB_URL['path'], "/"),

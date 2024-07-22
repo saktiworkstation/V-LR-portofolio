@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Str;
 
+$DATABASE_URL=parse_url(url: 'JAWSDB_URL');
+
 return [
 
     /*
@@ -46,11 +48,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => $JAWSDB_URL['host'],
+            'port' => $JAWSDB_URL['port'],
+            'database' => ltrim($JAWSDB_URL['host'], "/"),
+            'username' => $JAWSDB_URL['user'],
+            'password' => $JAWSDB_URL['pass'],
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',

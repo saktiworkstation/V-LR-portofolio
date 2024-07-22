@@ -50,7 +50,7 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => $JAWSDB_URL['host'],
             'port' => $JAWSDB_URL['port'],
-            'database' => ltrim($JAWSDB_URL['host'], "/"),
+            'database' => ltrim($JAWSDB_URL['path'], "/"),
             'username' => $JAWSDB_URL['user'],
             'password' => $JAWSDB_URL['pass'],
             'unix_socket' => env('DB_SOCKET', ''),
